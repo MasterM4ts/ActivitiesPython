@@ -1,3 +1,4 @@
+#Calculo para Efetuar Média de Aluno. 
 nome = "Matheus"
 idade = "17 Anos"
 sexo = "Masculino"
