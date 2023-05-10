@@ -1,4 +1,4 @@
-#Sistema para ler Nome do Produto,Quantidade Comprada,o Valor Unitário e o Porcentual de Desconto.
+#Programa para ler Nome do Produto,Quantidade Comprada,o Valor Unitário e o Porcentual de Desconto.
 #Após ler ,Calcular o Valor Total. 
 print("-"*30)
 name_Produto = input("Digite o Nome do Produto: \n>> ")
@@ -12,7 +12,7 @@ valor_Total = valor_Total - desconto_Produto
 print("+"+"="*26+"+")
 print(" "*7 + "<Nota Fiscal>")
 print("-"*27)
-print("i| Nome do Produto: %s."%name_Produto)
+print("I| Nome do Produto: %s."%name_Produto)
 print("-"*27)
-print("i| Valor Total: R$%.2f"%valor_Total)
+print("I| Valor Total: R$%.2f"%valor_Total)
 print("+"+"="*26+"+")

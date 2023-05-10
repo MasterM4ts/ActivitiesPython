@@ -1,4 +1,4 @@
-#Sistema Para Converter valor em Reais para Dólares.
+#Programa para Converter Valor em Reais para Dólares.
 print("+"+"-"*26+"+")
 reais = float(input("Digite a Quantia em Reais: \n>> "))
 dolares = float(input("Digite o Valor da Cotação do Dólar: \n>> "))
