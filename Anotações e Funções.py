@@ -6,6 +6,24 @@
  0  1  2  3  4  5 (->)        print(s[4])  //M
 -6 -5 -4 -3 -2 -1 (<-)        print(s[-9]) //l 
                               
+#Função Slices()  //Informa os Caracteres Solicitados.
+
+s = "Olá, Mundo!"
+print(s[1:3])
+xlá
+
+s = "Olá, Mundo"
+print(s[:3])
+xOlá
+
+s = "Olá, Mundo"
+print(s[5:])
+xMundo!
+
+s = "Olá Mundo"
+print(s[:])
+xOlá, Mundo!
+
 #######################################################################
 
 #Forma de Escrever Diferente.  
@@ -151,22 +169,3 @@ x3
 
 #######################################################################
 
-#Função Slices()  //Informa os Caracteres Solicitados.
-
-s = "Olá, Mundo!"
-print(s[1:3])
-xlá
-
-s = "Olá, Mundo"
-print(s[:3])
-xOlá
-
-s = "Olá, Mundo"
-print(s[5:])
-xMundo!
-
-s = "Olá Mundo"
-print(s[:])
-xOlá, Mundo!
-
-#######################################################################
