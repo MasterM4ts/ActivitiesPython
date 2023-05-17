@@ -1,4 +1,5 @@
 #Programa que Calcula a Área de um Quadrado e Imprime o Dobro da Área.
+
 print("+"+"="*30+"+")
 lado_Quadrado = float(input("Digite um Lado do Quadrado: \n>> "))
 

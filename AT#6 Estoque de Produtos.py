@@ -1,5 +1,6 @@
 #Programa para ler Nome do Produto,Quantidade Comprada,o Valor Unitário e o Porcentual de Desconto.
 #Após ler ,Calcular o Valor Total. 
+
 print("-"*30)
 name_Produto = input("Digite o Nome do Produto: \n>> ")
 quantidade_Produto = int(input("Digite a Quantidade de Produtos: \n>> "))

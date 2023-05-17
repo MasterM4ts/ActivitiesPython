@@ -1,4 +1,5 @@
 #Programa que Efetua Soma de uma Lista.
+
 t = [[1,2],[3],[4,5,6]]
 a = t[0]
 b = t[1]

@@ -1,4 +1,5 @@
 #Programa que Calcula o Valor do Novo Sálario reajustado de Acordo com a Tabela Abaixo:
+
 '''  Salário Atual        |       Reajuste
 ==========================|=====================                         
     Abaixo de R$500,00    |          15%
