@@ -1,4 +1,5 @@
 #Programa que Calcula a Média de Duas Notas.
+
 print("+"+"="*35+"+")
 nota_1 = float(input("I| Digite sua 1º Nota: \n>> "))
 nota_2 = float(input("I| Digite sua 2º Nota: \n>> "))

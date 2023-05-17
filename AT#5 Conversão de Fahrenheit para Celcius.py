@@ -1,4 +1,5 @@
 #Programa para Efetuar Calculo de Conversão Fahrenheit em Celcius.
+
 print("+"+"="*52+"+")
 print(" "*2 + "<Conversor de Temperatura Fahrenheit para Celcius>")
 print("+"+"="*52+"+")

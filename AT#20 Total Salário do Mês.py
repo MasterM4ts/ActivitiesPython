@@ -1,4 +1,5 @@
 #Programa que Calcula a Quantia Total do seu Salário Naquele Mês. 
+
 print("+"+"="*50+"+")
 salario_Hora = float(input("Digite Quanto Ganha por Hora Trabalhada: \n>> "))
 horas_Trabalho = float(input("Digite o Número de Horas Trabalhada: \n>> "))

@@ -1,4 +1,5 @@
 #Programa Informa o Número Digitado pelo Usúario.
+
 print("+"+"="*25+"+")
 num = int(input("Digite Um Número: \n>> "))
 
