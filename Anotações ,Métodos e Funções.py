@@ -271,6 +271,18 @@ lista[1:3] = []
 print(lista)
 print(len(lista))
 
+#Esclusão Índice Lista. //DEL//
+
+list = ["um","dois","três"]
+del list[1]
+print(list)
+x['dois','três']
+
+list = ["a","b","c","d","e","f"]
+del list[1:5]
+print(list)
+x['a','f']
+
 #Incerir Elemento em uma Lista.
 
 a = ["a","b","c"]
@@ -284,20 +296,6 @@ a = [4,2,8,6,5]
 a[2] = [True]
 print(a)
 x[4,2[True],6,5]
-
-#######################################################################
-
-#Esclusão Índice Lista. //DEL//
-
-list = ["um","dois","três"]
-del list[1]
-print(list)
-x['dois','três']
-
-list = ["a","b","c","d","e","f"]
-del list[1:5]
-print(list)
-x['a','f']
 
 #######################################################################
 
@@ -366,3 +364,36 @@ print(a)
 x[2,3,4]
 
 #######################################################################
+
+#While (Laço de Repetição).  
+
+#Parar a Operação.  \\Break\\
+
+while True:
+    valor = int(input("Digite o Valor 1 ou 0 para Encerrar. \n>> "))
+    
+    if valor == 1:
+        print("Valor Correto")
+    
+    else:
+        print("Valor para Sair")
+        break
+
+#Interrompe o Loop e vai a Proxima Interação.  \\Continue\\
+
+while True:
+   valor = int(input("Digite o Valor 1 ou 0 para Encerrar. \n>> "))
+
+   if valor >=1:
+      continue
+      print("maior que um")
+   if valor >=1:
+      print("maior que um")
+
+########################################################################
+
+#Importa o Programa de Acordo com Identação.   \\Import os\\
+#Pausa o Programa até a Digitação de uma Tecla.   \\os.system("pause")\\
+#Limpa após  o Pause ser Concluido.   \\os.system("cls")\\
+
+########################################################################
