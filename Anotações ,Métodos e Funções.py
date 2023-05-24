@@ -382,7 +382,7 @@ while True:
 #Interrompe o Loop e vai a Proxima Interação.  \\Continue\\
 
 while True:
-   valor = int(input("Digite o Valor 1 ou 0 para Encerrar. \n>> "))
+   valor = int(input("Digite um Valor: \n>> "))
 
    if valor >=1:
       continue
@@ -394,6 +394,48 @@ while True:
 
 #Importa o Programa de Acordo com Identação.   \\Import os\\
 #Pausa o Programa até a Digitação de uma Tecla.   \\os.system("pause")\\
-#Limpa após  o Pause ser Concluido.   \\os.system("cls")\\
+#Limpa após o Pause ser Concluido.   \\os.system("cls")\\
+
+########################################################################
+
+#String,Lista.  \\For\\
+
+nomes = ["Pedro","João","Leticia"]
+for n in nomes:
+   print(n)
+
+nome = "Matheus"
+for n in nome:
+   print(n)
+
+nomes = ["Pedro","João","Leticia"]
+for n in nomes:
+   print(n)
+   if n == "João":
+      break
+
+nomes = ["Pedro","João","Leticia"]
+for n in nomes:
+   if n == "João":
+      continue
+   print(n)
+
+#Números.  \\For\\
+
+for x in range(6):
+   print(x)
+
+for x in range(2,6):
+   print(x)
+
+for x in range(0,10,2):
+   print(x)
+
+for x in range(100,0,-1):
+   print(x)
+
+for i in range(5):
+   for j in range(6):
+      print(i,j)
 
 ########################################################################
