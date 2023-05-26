@@ -1,4 +1,4 @@
-#Programa que Armazena Dados em uma Lista e Posteriormente Imprime esses Dados, Consultar os Cadastros Realizados ou Exclui Cadastros Realizados.
+1#Programa que Armazena Dados em uma Lista e Posteriormente Imprime esses Dados, Consultar os Cadastros Realizados ou Exclui Cadastros Realizados.
 #Um Programa de Cadastro.
 
 import os
@@ -37,14 +37,14 @@ while True:
     print(" "*2+"\"Bem Vindo ao Cadastro\"")
     print("="*27)
     inicio = int(input("I| Digite a Opção Desejada: \n1 >> Cadastro \n2 >> Consulta \n3 >> Excluir Cadastro \n0 >> Sair: \n>> "))
-    print("="*27)
+    print("="*42)
     
     #Cadastro de Maticulas.
     
-    if inicio != 1 and 2 and 3:
-        print("+"+"="*10+"+")
+    if inicio != 1 and inicio != 2 and inicio != 3 and inicio != 0:
+        print("+"+"="*20+"+")
         print("I| Opção Invalida")
-        print("+"+"="*10+"+")
+        print("+"+"="*20+"+")
     
     elif inicio == 1:
         name = input("I| Digite seu Nome: \n>> ")
@@ -139,43 +139,53 @@ while True:
     #Consulta de Matriculas Realizadas.
     
     elif inicio == 2:
-        busca = int(input("I| Digite a Matricula: \n>> "))
-        print("+"+"="*10+"+")
-        print("I| Matricula %s"%list_matricula[busca-1])
-        print("+"+"="*10+"+")
-        print("I| Nomes: %s"%list_name[busca-1])
-        print("I| Sobrenomes: %s"%list_sobname[busca-1])
-        print("I| Endereços: %s"%list_end[busca-1])
-        print("I| Bairros: %s"%list_bairro[busca-1])
-        print("I| Cidades: %s"%list_cid[busca-1])
-        print("I| Estados: %s"%list_estado[busca-1])
-        print("I| Paises: %s"%list_pais[busca-1])
-        print("I| Telefones: %s"%list_fone[busca-1])
-        print("I| CPF: %s"%list_cpf[busca-1])
-        print("I| Pesos: %s"%list_peso[busca-1])
-        print("I| Alturas: %s"%list_altura[busca-1])
-        print("I| Idades: %s"%list_idade[busca-1])
-        print("I| Número de Cartões: %s"%list_numCartao[busca-1])
-        print("I| Emails: %s"%list_email[busca-1])
-        print("I| CEP: %s"%list_cep[busca-1])
-        print("I| Notas 1º: %s"%list_nota1[busca-1])
-        print("I| Notas 2º: %s"%list_nota2[busca-1])
-        print("I| Notas 3º: %s"%list_nota3[busca-1])
-        print("I| Notas 4º: %s"%list_nota4[busca-1])
-        print("I| Médias: %s"%list_media[busca-1])
-        print("I| Séries: %s"%list_serie[busca-1])
-        print("I| Classes: %s"%list_classe[busca-1])
-        print("I| Sexos: %s"%list_sexo[busca-1])
-        print("I| Cores: %s"%list_cor[busca-1])
-        print("+"+"="*35+"+")
-        os.system("pause")
-        os.system("cls")
+        
+        if inicio in list_matricula:
+            busca = int(input("I| Digite a Matricula: \n>> "))
+            print("+"+"="*10+"+")
+            print("I| Matricula %s"%list_matricula[busca-1])
+            print("+"+"="*10+"+")
+            print("I| Nomes: %s"%list_name[busca-1])
+            print("I| Sobrenomes: %s"%list_sobname[busca-1])
+            print("I| Endereços: %s"%list_end[busca-1])
+            print("I| Bairros: %s"%list_bairro[busca-1])
+            print("I| Cidades: %s"%list_cid[busca-1])
+            print("I| Estados: %s"%list_estado[busca-1])
+            print("I| Paises: %s"%list_pais[busca-1])
+            print("I| Telefones: %s"%list_fone[busca-1])
+            print("I| CPF: %s"%list_cpf[busca-1])
+            print("I| Pesos: %s"%list_peso[busca-1])
+            print("I| Alturas: %s"%list_altura[busca-1])
+            print("I| Idades: %s"%list_idade[busca-1])
+            print("I| Número de Cartões: %s"%list_numCartao[busca-1])
+            print("I| Emails: %s"%list_email[busca-1])
+            print("I| CEP: %s"%list_cep[busca-1])
+            print("I| Notas 1º: %s"%list_nota1[busca-1])
+            print("I| Notas 2º: %s"%list_nota2[busca-1])
+            print("I| Notas 3º: %s"%list_nota3[busca-1])
+            print("I| Notas 4º: %s"%list_nota4[busca-1])
+            print("I| Médias: %s"%list_media[busca-1])
+            print("I| Séries: %s"%list_serie[busca-1])
+            print("I| Classes: %s"%list_classe[busca-1])
+            print("I| Sexos: %s"%list_sexo[busca-1])
+            print("I| Cores: %s"%list_cor[busca-1])
+            print("+"+"="*35+"+")
+            os.system("pause")
+            os.system("cls")
+        
+        elif inicio not in list_matricula:
+            print("I| Matricula Não Encontrada.")
+            continue
+        
     
     elif inicio == 3:
         excluir = int(input("I| Digite a Matricula que Deseja Excluir: \n>> "))
         
-        if excluir == None:
+        if excluir not in list_matricula:
+            print("="*27)
             print("I| Matricula Inexistente")
+            continue
+        
         else:
             del list_matricula[excluir-1]
             del list_name[excluir-1]
@@ -206,5 +216,5 @@ while True:
             print("Matricula %d Excluida"%excluir)
             print("+"+"="*25+"+")
         
-    else:
+    else:     
         break
