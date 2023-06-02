@@ -439,3 +439,35 @@ for i in range(5):
       print(i,j)
 
 ########################################################################
+
+#Elementos Fixos.(Imutavel)  \\Tuple
+
+variavel = (elemento_1,elemento_2,elemento_3)
+
+variavel = tuple(elemento_1,elemento_2,elemento_3)
+
+print(variavel [?:?])
+
+a = (1,2)
+b = (3,4)
+c = (5,6)
+print(a + b + c)
+x(1,2,3,4,5,6)
+
+li = [[1,2],[3],[4,5,6]]
+print(type(li))
+xtype li <list>
+
+li = (tuple(li))
+print(type(li))
+xtype li <tuple>
+
+li = (1,2,3,4,5,6)
+print(type(li))
+xtype li <tuple>
+
+li = (list(li))
+print(type(li))
+xtype li <list>
+
+########################################################################
