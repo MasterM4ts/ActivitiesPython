@@ -471,3 +471,5 @@ print(type(li))
 xtype li <list>
 
 ########################################################################
+
+#Tratamento de Exceção   \\Try,Except,Else e Finally
