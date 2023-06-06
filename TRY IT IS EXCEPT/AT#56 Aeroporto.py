@@ -1,4 +1,4 @@
-#Programa Aero Porto.
+#Programa Aeroporto.
 #Efetua Cadastro de Cliente,Passagem,Avião e Tripulação.
 #Imprime um Registro Contendo Todas as Informações Digitadas pelo Usuário. 
 
@@ -11,7 +11,8 @@ cadastro_tripulacao = []
 
 while inicio != 0:
     try:
-        inicio = int(input("I| Digite a Opção:\n1 >> Cadastro Cliente\n2 >> Cadastro Passagem\n3 >> Cadastro Avião\n4 >> Cadastro Tripulação\n>>"))
+        print("+"+"="*30+"+")
+        inicio = int(input("I| Digite a Opção:\n"+"-"*21+"\n1 >> Cadastro Cliente\n2 >> Cadastro Passagem\n3 >> Cadastro Avião\n4 >> Cadastro Tripulação\n0 >> Registro(Encerrar Programa)\n>> "))
         os.system("pause")
         os.system("cls")
     except ValueError:
@@ -32,7 +33,7 @@ while inicio != 0:
         print("I| Bem Vindo ao Cadastro de Clientes I|")
         print("+"+"="*37+"+")
         nome = input("I| Digite seu Nome:\n>> ")
-        sob_nome = input("I| Digite seu Sobrenome:\n>>")
+        sob_nome = input("I| Digite seu Sobrenome:\n>> ")
         rg = input("I| Digite seu RG:\n>> ")
         cpf = input("I| Digite seu CPF:\n>> ")
         endereco = input("I| Informe seu Endereço:\n>> ")
@@ -109,7 +110,7 @@ while inicio != 0:
             else:
                 break
  
-        valor_passagem = valor_passagem - 5/100
+        valor_passagem -= 5/100
         cadastro_passagem.append([destino,origem,duracao,valor_passagem])
         print("-"*36)
         print("I| Cadastro de Passagem Concluida I|")
@@ -117,7 +118,7 @@ while inicio != 0:
         print("I| Destino: %s"%destino)
         print("I| Origem: %s"%origem)
         print("I| Duração: %d"%duracao)
-        print("I| Valor Passagem Com Desconto de 5%: %.2f"%valor_passagem)
+        print("I| Valor Passagem Com Desconto de 5%: ",valor_passagem)
         print("-"*45)
         os.system("pause")
         os.system("cls")
@@ -216,15 +217,105 @@ while inicio != 0:
         os.system("cls")
     
     elif inicio == 0:
-        print("="*38)
-        num_registro = int(input("I| Qual Registro Deseja Analizar:\n>> "))
-        print("="*38)
-        print("I| Registro %d"%num_registro)
-        print("I| Cadastro Cliente: %d | %s"%(num_registro,cadastro_cliente[num_registro-1]))
-        print("I| Cadastro Passagem: %d | %s"%(num_registro,cadastro_passagem[num_registro-1]))
-        print("I| Cadastro Avião: %d | %s"%(num_registro,cadastro_aviao[num_registro-1]))
-        print("I| Cadastro Tripulação: %d | %s"%(num_registro,cadastro_tripulacao[num_registro-1]))
-        print("="*38)
+        inicio = 1
+        while inicio != 0:
+            print("="*40)
+            inicio = int(input("I| Digite:\n1 >> Registro de Cadastro de Cliente\n2 >> Registro de Cadastro de Passagem\n3 >> Registro de Cadastro de Avião\n4 >> Registro de Cadastro de Tripulação\n0 >> Finalizar Programa\n>> "))
+            
+            if inicio == 1:
+                try:
+                    print("="*38)
+                    num_registro = int(input("I| Qual Registro De Cadastro Deseja Analizar:\n>> "))
+                    print("="*38)
+                    print("I| Registro %d"%num_registro)
+                    num_registro -=1
+                    print("I| Cadastro Cliente: %d |"%num_registro)
+                    for i in cadastro_cliente:
+                        print("-"*35)  
+                        print("I| Nome: ",cadastro_cliente[num_registro][0])
+                        print("I| Sobrenome: ",cadastro_cliente[num_registro][1])
+                        print("I| RG: ",cadastro_cliente[num_registro][2])
+                        print("I| CPF: ",cadastro_cliente[num_registro][3])
+                        print("I| Endereço: ",cadastro_cliente[num_registro][4])
+                        print("I| Telefone: ",cadastro_cliente[num_registro][5])
+                        print("I| Idade: ",cadastro_cliente[num_registro][6])
+                        print("-"*24)
+                    os.system("pause")
+                except ValueError:
+                    print("-"*33)
+                    print("I| Registro Não Encontrado\n\"Tente Denovo\"")
+                    print("-"*33)
+                    os.system("pause")
+                    os.system("cls")
+
+            elif inicio == 2:
+                try:  
+                    print("-"*35)
+                    num_registro = int(input("I| Qual Registro De Passaporte Deseja Analizar:\n>> "))
+                    print("I| Registro %d"%num_registro)
+                    num_registro -=1
+                    print("I| Cadastro Passagem: %d |"%num_registro)
+                    for i in cadastro_passagem:
+                        print("-"*36)
+                        print("I| Destino: ",cadastro_passagem[num_registro][0])
+                        print("I| Origem: ",cadastro_passagem[num_registro][1])
+                        print("I| Duração: ",cadastro_passagem[num_registro][2])
+                        print("I| Valor Passagem Com Desconto de 5%: ",cadastro_passagem[num_registro][3])
+                        print("-"*45)
+                    os.system("pause")
+                except ValueError:
+                    print("-"*33)
+                    print("I| Registro Não Encontrado\n\"Tente Denovo\"")
+                    print("-"*33) 
+                    os.system("pause")
+                    os.system("cls")
+            
+            elif inicio == 3:
+                try:
+                    print("-"*35) 
+                    num_registro = int(input("I| Qual Registro De Avião Deseja Analizar:\n>> "))
+                    print("I| Registro %d"%num_registro)
+                    num_registro -=1
+                    print("I| Cadastro Avião: %d |"%num_registro)
+                    for i in cadastro_aviao:
+                        print("-"*33)
+                        print("I| Modelo: ",cadastro_aviao[num_registro][0])
+                        print("I| Ano: ",cadastro_aviao[num_registro][1])
+                        print("I| Horas de Viagem: ",cadastro_aviao[num_registro][2])
+                        print("I| Cor: ",cadastro_aviao[num_registro][3])
+                        print("I| Quantidade de Passageiros: ",cadastro_aviao[num_registro][4])
+                        print("-"*35)
+                    os.system("pause")
+                except ValueError:
+                    print("-"*33)
+                    print("I| Registro Não Encontrado\n\"Tente Denovo\"")
+                    print("-"*33)
+                    os.system("pause")
+                    os.system("cls")
+            
+            elif inicio == 4:
+                try:
+                    print("-"*35)
+                    num_registro = int(input("I| Qual Registro Da Tripulação Deseja Analizar:\n>> "))
+                    print("I| Registro %d"%num_registro)
+                    num_registro -=1
+                    print("I| Cadastro Tripulação: %d |"%num_registro)
+                    for i in cadastro_tripulacao:
+                        print("-"*38)
+                        print("I| Nome: ",cadastro_tripulacao[num_registro][0])
+                        print("I| Cargo: ",cadastro_tripulacao[num_registro][1])
+                        print("I| Idade: ",cadastro_tripulacao[num_registro][2])
+                        print("I| Data Admissão: ",cadastro_tripulacao[num_registro][3])
+                        print("I| Telefone: ",cadastro_tripulacao[num_registro][4])
+                        print("-"*35)
+
+                except ValueError:
+                    print("-"*33)
+                    print("I| Registro Não Encontrado\n\"Tente Denovo\"")
+                    print("-"*33)
+                    os.system("pause")
+                    os.system("cls")
+        
         os.system("pause")
         print("I| Programa Encerrado.")
         print("I| Obrigado Por Utilizalo.")
