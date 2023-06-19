@@ -1,4 +1,4 @@
-#Dicionário Contendo 5 Nomes como Chave e Idade como Valor.
+#Programa que Contém Dicionário Contendo 5 Nomes como Chave e Idade como Valor.
 
 import os
 for i in range(1,6):

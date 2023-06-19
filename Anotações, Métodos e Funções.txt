@@ -89,7 +89,7 @@ xTrue
 
 #######################################################################
 
-#Método CaseFold()  //Transforma a string em Minusculo.
+#Transforma a string em Minusculo.                  \\Método CaseFold()
 
 a = "MATHEUS"
 print(a.casefold())
@@ -97,7 +97,7 @@ xmatheus
 
 #######################################################################
 
-#Método Lower()  //Transforma a string em Minusculo.
+#Transforma a string em Minusculo.                     \\Método Lower()
 
 a = "MATHEUS"
 print(a.lower())
@@ -109,7 +109,7 @@ xFalse
 
 #######################################################################
 
-#Método Digit()  //Indentifica se é Digito e Informa.
+#Indentifica se é Digito e Informa.                    \\Método Digit()
 
 a = "12345"
 print(a.isdigit())
@@ -121,7 +121,7 @@ xFalse
 
 #######################################################################
 
-#Método Reaplese()  //Substitui a string da Váriavel. 
+#Substitui a string da Váriavel.                    \\Método Reaplese()
 
 a = "Matheus Matos
 print(a.reaplese("Matos","Nunes"))
@@ -129,7 +129,7 @@ xMatheus Nunes
 
 #######################################################################
 
-#Método Split()  //Substitui o parâmetro "- , *, / , + ,etc" por ",".
+#Substitui o parâmetro "- , *, / , + ,etc" por ",".    \\Método Split()
 
 a = "Matheus-Matos-Nunes"
 print(a.split("-"))
@@ -145,7 +145,7 @@ x17
 
 #######################################################################
 
-#Método Rfind()  //Localiza onde começa a string <-.
+#Localiza onde começa a string <-.                     \\Método Rfind()
 
 a = "Matheus de Matos Matos"
 print(a.rfind("Matos"))
@@ -153,7 +153,7 @@ x5
 
 #######################################################################
 
-#Função In()  //Informa se tem uma string Dentro da Váriavel.
+#Informa se tem uma string Dentro da Váriavel.            \\Função In()
 
 a = "Matheus de Matos Nunes"
 print("Matos"in a)
@@ -161,7 +161,7 @@ xTrue
 
 #######################################################################
 
-#Função Count()  //Informa a Quantidade de Caracteres tem dentro da string.
+#Informa a Quantidade de Caracteres tem dentro da string.     \\Função Count()
  
 a = "Matheus de Matos Nunes"
 print(a.count("s"))
@@ -177,6 +177,7 @@ print(type(list))
 x['Matheus',17,'Anos',1,12,2005]
 <class 'list'>
 
+---------------------------------------------
 
 #Utilização Função //LEN()//
 
@@ -184,17 +185,23 @@ list = ["Matheus",17,"Anos",1,12,2005]
 print(len(list))
 x6
 
+---------------------------------------------
+
 #[2]Índice da lista,[0]Índice do Caracter Dentro da Lista.
 
 list = ["Matheus",17,"Anos",1,12,2005]
 print(list[2][0])
 xA
 
+---------------------------------------------
+
 #[2]Índice da lista,[0]Índice da Sublista.
 
 list = ["Matheus",17,[56,57,"Fortnite"],"Anos",1,12,2005]
 print(list[2][1])
 x57
+
+---------------------------------------------
 
 #[2]Índice da lista,[2]Índice da Sublista,[0]Índice do Caracter Dentro da Sublista.
 
@@ -204,7 +211,7 @@ xF
 
 #######################################################################
 
-#Função In,Not e Not in.
+#Função                                               \\In,Not e Not in.
 
 animais = ["gato","cachorro"]
 print("gato" in animais)
@@ -238,6 +245,8 @@ x1
 print(sum(a))
 x45
 
+---------------------------------------------
+
 #Operações Matematicas com Funções.
 
 a = [1,2,3,4,5,6,7,8,9,10]
@@ -254,12 +263,16 @@ frutas[-1] = "Laranja"
 print(frutas)
 x['Pera','Maçã','Laranja']
 
+---------------------------------------------
+
 #Substituir Índice Lista.
 
 lista = ["Flor","Azul",[1,"Casa"]]
 lista[2][1] = "Escola"
 print(lista)
 x['Flor', 'Azul', [1, 'Escola']]
+
+---------------------------------------------
 
 #Exclusão Índice Lista.
 
@@ -270,6 +283,8 @@ print(len(lista))
 lista[1:3] = []
 print(lista)
 print(len(lista))
+
+---------------------------------------------
 
 #Esclusão Índice Lista. //DEL//
 
@@ -283,12 +298,16 @@ del list[1:5]
 print(list)
 x['a','f']
 
+---------------------------------------------
+
 #Incerir Elemento em uma Lista.
 
 a = ["a","b","c"]
 a[1:1] = ["x ","y"]
 print(a)
 x['a','x','y','b','c']
+
+---------------------------------------------
 
 #Incerir Sublista.
 
@@ -378,6 +397,8 @@ while True:
     else:
         print("Valor para Sair")
         break
+
+---------------------------------------------
 
 #Interrompe o Loop e vai a Proxima Interação.  \\Continue\\
 
@@ -472,4 +493,53 @@ xtype li <list>
 
 ########################################################################
 
-#Tratamento de Exceção   \\Try,Except,Else e Finally
+#Funções
+
+def hello():
+   print("olá!!!")
+hello()
+
+---------------------------------------------
+
+def hello(name):
+   print("Olá",name)
+
+hello("Matheus")
+      \\OU\\
+name = input("Digite...")
+hello(name)
+
+---------------------------------------------
+
+def hello(name):
+   print("Olá",name)
+a = input("Digite...")
+hello(a)
+
+def hello(name):
+   print("Olá",name)
+hello("Matheus")
+hello("Guilherme")
+hello("Eduardo")
+.
+.
+.
+
+---------------------------------------------
+
+def hello(name,idade):
+   print("Olá",name,"\nSua idade é:",idade)
+hello("Matheus",17)
+
+def calcular_pagamento(qtd_horas,valor_hora):
+   horas = float(qtd_horas)
+   taxa = float(valor_hora)
+   if horas <= 40:
+      salario = horas*taxa
+   else:
+      h_excd = horas - 40
+      salario = 40*taxa+(h_excd*(1.5*taxa))
+
+   print(salario)
+
+---------------------------------------------
