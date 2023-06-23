@@ -28,6 +28,6 @@ while inicio != 0:
     else:
         print("I| Relatório:")
         for i in relatorio:
-            print("I| %s"%i)
+            print(f"I| R${i}")
         print("I| Valor Total do Relatório: R$",sum(relatorio))
         break
