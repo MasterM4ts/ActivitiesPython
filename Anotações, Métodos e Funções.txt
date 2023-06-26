@@ -286,7 +286,7 @@ print(len(lista))
 
 ---------------------------------------------
 
-#Esclusão Índice Lista. //DEL//
+#Esclusão Índice Lista.                                        //DEL//
 
 list = ["um","dois","três"]
 del list[1]
@@ -318,7 +318,7 @@ x[4,2[True],6,5]
 
 #######################################################################
 
-#Anexação Valor.  \\Append\\   //Adiciona ao Final da Lista.(Fila)
+#Anexação Valor.       \\Append\\   //Adiciona ao Final da Lista.(Fila)
 
 a = [81,82,83]
 a.append(5)
@@ -327,7 +327,7 @@ x[81,82,83,5]
 
 #######################################################################
 
-#Ordenaçao da Lista.  \\Sort\\  //Ordem Crecente.
+#Ordenaçao da Lista.                         \\Sort\\  //Ordem Crecente.
 
 a = [8,5,4,3]
 a.sort()
@@ -336,7 +336,7 @@ print(a)
 
 #######################################################################
 
-#Ordenaçao da Lista.  \\Reverse\\  //Ordem Decrecente.
+#Ordenaçao da Lista.                   \\Reverse\\  //Ordem Decrecente.
 
 a = [8,5,4,3]
 a.sort(reverse=True)
@@ -353,7 +353,7 @@ x3
 
 #######################################################################
 
-#Insere o Valor na Posição do Ídice Desejado.  \\Insert\\
+#Insere o Valor na Posição do Ídice Desejado.                \\Insert\\
 
 a = [1,2,3,4]
 a.insert(2,100)
@@ -362,7 +362,7 @@ x[1,2,100,3,4]
 
 #######################################################################
 
-#Informa Quantidade de Aparições o Elemento.  \\Cont\\
+#Informa Quantidade de Aparições o Elemento.                   \\Cont\\
 
 a = [1,2,3,4,5,6,4]
 print(a.cont(4))
@@ -370,7 +370,7 @@ x2
 
 #######################################################################
 
-#Remoção do Ultimo Elemento da Lista.  \\Pop\\
+#Remoção do Ultimo Elemento da Lista.                           \\Pop\\
 
 a = [1,2,3,4]
 a.pop()
@@ -386,7 +386,7 @@ x[2,3,4]
 
 #While (Laço de Repetição).  
 
-#Parar a Operação.  \\Break\\
+#Parar a Operação.                                            \\Break\\
 
 while True:
     valor = int(input("Digite o Valor 1 ou 0 para Encerrar. \n>> "))
@@ -400,7 +400,7 @@ while True:
 
 ---------------------------------------------
 
-#Interrompe o Loop e vai a Proxima Interação.  \\Continue\\
+#Interrompe o Loop e vai a Proxima Interação.               \\Continue\\
 
 while True:
    valor = int(input("Digite um Valor: \n>> "))
@@ -419,7 +419,7 @@ while True:
 
 ########################################################################
 
-#String,Lista.  \\For\\
+#String,Lista.                                                   \\For\\
 
 nomes = ["Pedro","João","Leticia"]
 for n in nomes:
@@ -461,7 +461,7 @@ for i in range(5):
 
 ########################################################################
 
-#Elementos Fixos.(Imutavel)  \\Tuple
+#Elementos Fixos.(Imutavel)                                    \\Tuple\\
 
 variavel = (elemento_1,elemento_2,elemento_3)
 
@@ -493,7 +493,7 @@ xtype li <list>
 
 ########################################################################
 
-#Funções
+                                                               #Funções#
 
 def hello():
    print("olá!!!")
@@ -543,3 +543,86 @@ def calcular_pagamento(qtd_horas,valor_hora):
    print(salario)
 
 ---------------------------------------------
+
+########################################################################
+
+                                                            #Biblioteca#
+
+\\Math\\
+
+---------------------------------------------
+
+import math
+x = 3.5
+print(math.ceil(x))    math.ceil(x) >> Retorna o Valor Inteiro Maior. ((x),Arredonda para Cima.).
+
+---------------------------------------------
+
+import math
+b = -5
+print(math.fabs(b))    math.fabs(b) >> Retorna o Valor Absoluto (-5 = 5.0).
+
+---------------------------------------------
+
+import math
+n = 3
+print(math.factorial(n))    math.factorial(n) >> Retorna o Fatorial de (n) como Inteiro 
+                                               | ValorError se não for um Inteiro ou for Negativo.
+
+---------------------------------------------
+
+import math
+y = 3.5
+print(math.floor(y))    math.floor(y) >> Retorna o Valor Inteiro Menor. ((y),Arredonda para Baixo)
+
+---------------------------------------------
+
+import math
+m = 81
+print(math.isqrt(m))    math.isqrt(m) >> Retorna a Raiz Quadrada Inteira do Inteiro não Negativo de (m).
+                        sort >> Retorna Float.
+
+---------------------------------------------
+
+import math
+x = 2
+y = 10
+print(math.pow(x,y))    math.pow(x,y) >> Retorna x Elevado a Potência de y.
+
+---------------------------------------------
+########################################################################
+
+#Datetime#
+
+---------------------------------------------
+
+import (datetime as \\dt\\) >> Apelido.
+print(datetime.date.today())  datetime.today() >> Retorna a Data .
+
+strftime() >> Formata a Data.
+print(datetime.date.today().strftime('%d/%m/%Y'))
+print(datetime.date.today().strftime(' Dia %d do Mês %m do Ano de %Y'))
+
+---------------------------------------------
+
+import datetime
+print(datetime.datetime.now())   datetime.datetime.now() >> Retorna a Data / Hora,Minutos e Segundos.
+
+strftime() Formata a Hora.
+print(datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')) >> Data e Hora.
+print(datetime.datetime.now().strftime('%H:%M:%S')) >> Horas
+
+########################################################################
+
+#Time
+
+---------------------------------------------
+
+import time 
+a = 0
+x = time.perf_conuter()
+while a < 1000:
+   print(a)
+   a += 1
+y = time.perf_conuter()
+print(y - x)

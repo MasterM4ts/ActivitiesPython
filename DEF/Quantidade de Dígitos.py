@@ -2,6 +2,7 @@
 
 def qtd_digitos(num):
     num = str(num)
+    cont = 0
     for i in num:
         cont += 1 
     return cont
