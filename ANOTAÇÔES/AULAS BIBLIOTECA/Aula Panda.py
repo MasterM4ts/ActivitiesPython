@@ -1,3 +1,5 @@
+#Apresentação#
+
 import pandas as pd
 
 vendas = {'data':['26/06/2023','27/06/2023'],'valor':[15,20],'produto':['feijão','arroz'],'qtde':[15,20]}
