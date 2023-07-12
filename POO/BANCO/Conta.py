@@ -1,5 +1,7 @@
 from time import sleep
 class Conta():
+    
+    
     def __init__(self,nome,conta,agencia,cpf,fone):
         self.nome = nome
         self.conta = conta

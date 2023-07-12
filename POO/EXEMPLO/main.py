@@ -1,6 +1,4 @@
-
-
-from POO.Exemplo.Vendedor import*
+from POO.EXEMPLO.Vendedor import*
 
 vendedor1 = Vendedor("Matheus",1000)
 print(vendedor1.nome,vendedor1.vendas)
