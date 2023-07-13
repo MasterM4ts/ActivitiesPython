@@ -2,6 +2,8 @@ from Bola import*
 import os
 
 while True:
+
+    
     try:
         print("="*22)
         print("I| Cadastro da Bola I|")

@@ -2,6 +2,8 @@ from Conta import*
 import os
 
 while True:
+
+    
     try:
         print("="*27)
         print("I|   \"Cadatro de Banco\"  I|")

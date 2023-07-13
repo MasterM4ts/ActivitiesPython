@@ -16,5 +16,4 @@ class Vendedor():
         if self.vendas > meta:
             print("Bateu Meta")
         else:
-            print("Não Bateu a Meta")
-            
+            print("Não Bateu a Meta")            
