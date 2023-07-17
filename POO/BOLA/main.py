@@ -1,3 +1,4 @@
+#Abstração#
 from Bola import*
 import os
 

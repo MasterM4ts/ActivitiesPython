@@ -1,3 +1,4 @@
+#Encapsulamento#
 from time import sleep
 class Banco():
     

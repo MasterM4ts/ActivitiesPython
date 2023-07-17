@@ -1,3 +1,4 @@
+#Herença#
 class Pessoa:
 
 

@@ -1,3 +1,4 @@
+#Herença#
 from Pessoa import*
 class Professor(Pessoa):
     
