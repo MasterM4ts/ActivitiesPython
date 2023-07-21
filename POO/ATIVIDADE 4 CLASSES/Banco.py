@@ -7,20 +7,44 @@ class Banco(Cadastro):
         self.__saldo = 0
         
 
-    def cadastro(self):
-        return super().cadastro()
+    def cadastro():
+        nome = input("I| Digite seu Nome:\n>> ")
+        cpf = input("I| Digite seu CPF:\n>> ")
+        fone = input("I| Digite seu Telefone:\n>> ")
+        email = input("I| Digite seu Email:\n>> ")
+        endereco = input("I| Digite seu Endereço:\n>> ")
+        senha = pwinput("I| Crie uma Senha:\n>> ")
+        Banco(nome,cpf,fone,email,endereco,senha) 
+        return True  
 
 
     def depositar(self,valor):
         self.__saldo += valor
         print("I| Deposito Concluido I|")
+        os.system("pause")
+        os.system("cls")
     
 
     def sacar(self,senha):
         if senha == self.__senha:
-            valor = float(input("I| Digite o Valor a ser Sacado:\n>> "))
-            self.__saldo -= valor
-            return self.__saldo
+            
+            
+            while True:
+                try:
+                    valor = float(input("I| Digite o Valor a ser Sacado:\n>> "))
+
+
+                except ValueError:
+                    print("-"*28)
+                    print("I| Digite Somente Números I|")
+                    print("-"*28)
+                
+                
+                else:
+                    self.__saldo -= valor
+                    return self.__saldo
+                
+        
         else:
             print("I| Senha Invalida I|")
             os.system("pause")
@@ -36,6 +60,8 @@ class Banco(Cadastro):
             print(f"I| Saldo...{self.__saldo}")
             os.system("pause")
             os.system("cls")
+        
+        
         else:
             print("I| Senha Invalida I|")
             os.system("pause")
