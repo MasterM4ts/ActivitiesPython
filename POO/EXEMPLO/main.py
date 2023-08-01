@@ -1,3 +1,4 @@
+#Abstração#
 from POO.EXEMPLO.Vendedor import*
 
 vendedor1 = Vendedor("Matheus",1000)

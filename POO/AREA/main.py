@@ -1,3 +1,4 @@
+#Abstração#
 from Area import*
 import os
 

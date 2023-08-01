@@ -1,3 +1,4 @@
+#Abstração#
 class Bola():
 
 

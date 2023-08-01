@@ -1,3 +1,4 @@
+#Abstração#
 from time import sleep
 class Conta():
     

@@ -1,3 +1,4 @@
+#Encapsulamento#
 from Banco import*
 from pwinput import*
 import os

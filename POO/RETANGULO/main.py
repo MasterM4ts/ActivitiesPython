@@ -1,3 +1,4 @@
+#Abstração#
 from Retangulo import*
 import os
 

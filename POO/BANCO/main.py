@@ -1,3 +1,4 @@
+#Abstração#
 from Conta import*
 import os
 
