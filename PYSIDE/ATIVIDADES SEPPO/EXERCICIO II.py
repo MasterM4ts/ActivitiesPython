@@ -4,10 +4,10 @@ import sys
 
 
 class MainWindow(QMainWindow):
-    def _init_(self):
-        super()._init_()
-        self.setWindowTitle("Exercicio 2!!!")
-        
+    def __init__(self):
+        super().__init__()
+    
+        self.setWindowTitle("Exercicio II!!!")
         self.button= QPushButton(" Botão",self)
         self.button.setGeometry(190,10,100,70)
         self.result_label=QLabel(self)

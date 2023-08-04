@@ -3,12 +3,13 @@ from PyQt5.QtCore import QSize, Qt
 import sys
 
 class MainWindow(QMainWindow):
-    def _init_(self):
+    def __init__(self):
+        super().__init__()
         
-        super()._init_()
-        self.setWindowTitle("Hello World!!!")
+        
+        self.setWindowTitle("Exercicio I!!")
         self.setFixedSize(600,400)
-        self.lbl = QLabel("Oiee mundo")
+        self.lbl = QLabel("Hello World")
         font = self.lbl.font()
         font.setPointSize(35)
         self.lbl.setFont(font)
