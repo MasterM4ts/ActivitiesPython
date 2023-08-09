@@ -1,9 +1,8 @@
-import typing
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QFrame, QBoxLayout, QCheckBox, QLineEdit, QHBoxLayout, QVBoxLayout, QLayout
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QSize, Qt
 import sys
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QCheckBox, QLineEdit, QHBoxLayout, QVBoxLayout
+
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -32,7 +31,7 @@ class MainWindow(QWidget):
         
         
         self.input_nome = QLineEdit(self)
-        self.input_nome.setGeometry(70, 10, 550, 20)
+        self.input_nome.setGeometry(70, 10, 500, 20)
         self.input_fone = QLineEdit(self)
         self.input_fone.setGeometry(70, 40, 500, 20)
         self.input_endereco = QLineEdit(self)
@@ -80,6 +79,7 @@ class MainWindow(QWidget):
         self.fone = self.input_fone.text()
         self.endereco = self.input_endereco.text()
         
+        
         info = QHBoxLayout()
         try:
             self.label_info = QLabel(f"Informações\nNome: {self.nome}\nSexo: {self.sexo}\nTelefone: {self.fone}\nEndereço: {self.endereco}")
@@ -116,6 +116,6 @@ class MainWindow(QWidget):
            
         
 app = QApplication(sys.argv)
-m = MainWindow()
-m.show()
+window = MainWindow()
+window.show()
 app.exec()  
