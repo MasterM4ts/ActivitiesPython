@@ -7,5 +7,4 @@ class Circulo(Shape):
     
     
     def calculo_area(self):
-        area = 3.14 * (self.raio**2)
-        print("A área do Círculo é: {area}")
+        return 3.14 * (self.raio**2)

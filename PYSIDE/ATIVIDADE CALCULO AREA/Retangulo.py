@@ -1,7 +1,4 @@
 import Shape 
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QCheckBox, QLineEdit, QHBoxLayout, QVBoxLayout
 
 class Retangulo(Shape):
     def __init__(self, cor, base, altura):
@@ -9,9 +6,6 @@ class Retangulo(Shape):
         self.altura = altura
         self.base = base
         
-        
-
-
     
     def caculo_area(self):
         area = self.base * self.altura
