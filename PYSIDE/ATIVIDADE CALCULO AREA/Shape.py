@@ -1,7 +1,7 @@
 class Shape:
-    def __init__(self, cor):
+    def __init__(self, cor = "Branco"):
         self.cor = cor
+        
     
-    
-    def calcular_area(self):
+    def calular_area(self):
         pass

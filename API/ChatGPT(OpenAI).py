@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 def get_compilation(prompt, model = "gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(

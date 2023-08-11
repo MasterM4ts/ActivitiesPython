@@ -1,10 +1,12 @@
-import Shape
+from Shape import Shape
+from PyQt5.QtWidgets import QLabel
 
 class Circulo(Shape):
-    def __init__(self, cor, raio):
-        super().__init__(self, cor)
+    def __init__(self, raio, cor):
+        super().__init__(cor)
         self.raio = raio
-    
-    
-    def calculo_area(self):
-        return 3.14 * (self.raio**2)
+        
+        
+    def calcular_area(self):
+        return 3.14 * (self.raio ** 2)
+        

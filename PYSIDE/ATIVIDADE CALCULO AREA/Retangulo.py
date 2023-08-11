@@ -1,12 +1,15 @@
-import Shape 
+from Shape import Shape
+from PyQt5.QtWidgets import QLabel
+
 
 class Retangulo(Shape):
-    def __init__(self, cor, base, altura):
-        super().__init__(self, cor)
-        self.altura = altura
+    def __init__(self, base, altura, cor):
+        super().__init__(cor)
         self.base = base
+        self.altura = altura
+    
+    
+    def calcular_area(self):
+        return self.base * self.altura
         
     
-    def caculo_area(self):
-        area = self.base * self.altura
-        print("A área do Retângulo é: {area}")    
