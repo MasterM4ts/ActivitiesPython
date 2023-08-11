@@ -14,6 +14,9 @@ class MainWindow(QMainWindow):
         self.label2 = QLabel()
         
         
+        #self.ck.setTristate(True) 
+        
+        
         layout = QVBoxLayout()
         layout.addWidget(self.label)
         layout.addWidget(self.ck)
