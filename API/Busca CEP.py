@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Busca CEP")
         
-endereco = brazilcep.get_address_from_cep('45715-154')
+endereco = brazilcep.get_address_from_cep('79017-121')
 print(endereco)
 
 app = QApplication(sys.argv)
