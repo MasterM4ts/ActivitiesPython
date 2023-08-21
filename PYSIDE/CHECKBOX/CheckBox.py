@@ -1,6 +1,6 @@
 import sys
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QCheckBox, QVBoxLayout
+from PySide6 import QtCore
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QCheckBox, QVBoxLayout
 
 
 class MainWindow(QMainWindow):
