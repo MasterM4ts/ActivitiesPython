@@ -1,7 +1,7 @@
 import sys
 from Retangulo import*
 from Circulo import*
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QHBoxLayout, QWidget, QLabel, QLineEdit, QTextBrowser
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QHBoxLayout, QWidget, QLabel, QLineEdit, QTextBrowser
 
 
 class TelaPrincipal(QMainWindow):

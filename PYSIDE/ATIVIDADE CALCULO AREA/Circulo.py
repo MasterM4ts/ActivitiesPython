@@ -1,5 +1,5 @@
 from Shape import Shape
-from PyQt5.QtWidgets import QLabel
+from PySide6.QtWidgets import QLabel
 
 class Circulo(Shape):
     def __init__(self, raio, cor):
