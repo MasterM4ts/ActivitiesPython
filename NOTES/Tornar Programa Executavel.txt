@@ -1,0 +1,2 @@
+pyinstaller.exe --onefile --windowed --icon="imagem".ico "arquivo".py
+pyinstaller --console "arquivo".py
