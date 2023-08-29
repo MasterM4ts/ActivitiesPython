@@ -1,120 +1,81 @@
--- Criação de um Banco de Dados --
-create database Bike_Store;		
-use Bike_Store;
+create database Fabrica_108;
+use Fabrica_108;
 
-
--- Criação de Tabelas dentro do Banco de Dados --
--- Cada Tabela Contendo Atributos --
-create table Acct_Typ_Cd_LU_Tab(
-Acct_Code int auto_increment not null,
-Accont_Type varchar (20) not null,
-primary key (Acct_Code)
+create table ADM(
+id_adm int auto_increment not null,
+cpf int (12) not null,
+nome varchar (30) not null,
+senha varchar (20) not null,
+email varchar (50) not null,
+primary key (id_adm)
 );
 
 
-create table Customer(
-Customer_ID int auto_increment not null,
-Customer_Lname varchar (20) not null,
-Customer_Fname varchar (20) not null,
-Cust_street varchar (30) not null,
-Cust_city varchar (50) not null,
-St_code int (20) not null,
-Cust_zip varchar (10) not null,
-Cust_phone int (15) not null,
-Fax_phone int (20) not null,
-Acct_Code int (50) not null,
-primary key (Customer_ID)
+create table Fabricas(
+id_fabricas int auto_increment not null,
+nome varchar (30) not null,
+texto varchar (200) not null,
+endimagem varchar (100) not null,
+primary key (id_fabricas)
 );
 
 
-create table Customer_Account(
-Customer_ID int auto_increment not null,
-Last_purch_dte varchar (50) not null,
-Last_pymt_dte varchar (50) not null,
-Last_acct_trans_dte varchar (50) not null,
-Trans_code int (50) not null,
-Acct_balance float (50) not null,
-primary key (Customer_ID)
+create table Vagas(
+id_vagas int auto_increment not null,
+representante varchar (30) not null,
+nome varchar (30) not null,
+cnpj int (10) not null,
+email varchar (50) not null,
+fone int (12) not null,
+descricao_vaga varchar (100) not null,
+primary key (id_vagas)
 );
 
 
-create table Transaction_code(
-Trans_code int auto_increment not null,
-Transaction_description varchar (50) not null,
-primary key (Trans_code)
+create table Banco_Talentos(
+id_talentos int auto_increment not null,
+nome varchar (30) not null,
+fone int (12) not null,
+rg int (12) not null,
+cpf int (12) not null,
+endereco varchar (50) not null,
+linkedin varchar (100) not null,
+primary key (id_talentos)
 );
 
 
-create table Customer_Acct_Hist1(
-Customer_ID int auto_increment not null,
-Trans_dte varchar (20) not null,
-Trans_code int (20) not null,
-Old_acct_balance float (50) not null,
-New_acct_balance float (50) not null,
-primary key (Customer_ID)
+create table Edital(
+id_edital int auto_increment not null,
+nome varchar (30) not null,
+dta_inicio datetime (10) not null,
+dta_final datetime (10) not null,
+endereco_arquivo varchar (30) not null,
+primary key (id_edital)
 );
 
 
-create table Purchase_Order(
-Seg_ID int auto_increment not null,
-Purch_dte varchar (30) not null,
-Custumer_ID int (30) not null,
-Bar_code int (30) not null,
-Serial_num int (35) not null,
-Model_ID int (30) not null,
-Quantity int (30) not null,
-Price float (30) not null,
-primary key (Seg_ID)
+create table Vagas_psg(
+id_psg int auto_increment not null,
+escolaridade varchar (30) not null,
+email varchar (30) not null,
+fone int (20) not null,
+dta_nascimento varchar (12),
+responsavel varchar (30) not null,
+nome varchar (30) not null,
+cpf int (20) not null,
+id_edital integer,
+constraint fk_VagasEdital foreign key (id_edital) references Edital (id_edital),
+primary key (id_psg)
 );
 
 
-create table Parts_Inventory(
-Bar_code int auto_increment not null,
-Part_name varchar (30) not null,
-Supplier_ID int (20) not null,
-Prt_description varchar (30) not null,
-Prt_cost float (30) not null,
-Prt_price float (30) not null,
-Quantity int (30) not null,
-primary key (Bar_code)
-);
-
-
-create table Bike_Description(
-Model_ID int auto_increment not null,
-Model_name varchar (30) not null,
-Inv_price float (30) not null,
-Sale_price float (30) not null,
-Description varchar (30) not null,
-primary key (Model_ID)
-);
-
-
-create table Supplier(
-Supplier_ID int auto_increment not null,
-Supplier_name varchar (30) not null,
-Sup_street varchar (30) not null,
-Sup_city varchar (30) not null,
-St_code int (20) not null,
-Sup_zip int (10) not null,
-Sup_phone int (20) not null,
-Sup_fax varchar (30) not null,
-primary key (Supplier_ID)
-);
-
-
-create table Bike_Inventory(
-Seg_ID int auto_increment not null,
-Serial_Number int (30) not null,
-Supplier_ID int (30) not null,
-Inventory_dte varchar (30) not null,
-Model_ID int (30) not null,
-primary key (Seg_ID)
-);
-
-
-create table State_Ikup(
-St_code int auto_increment not null,
-State_name varchar (30) not null,
-primary key (St_code)
+create table Projeto(
+id_projeto int auto_increment not null,
+cpf_titular int (20) not null,
+email varchar (30) not null,
+cnpj int (30) not null,
+descricao varchar (100) not null,
+id_edital integer,
+constraint fl_ProjetoEdital foreign key (id_edital) references Edital (id_edital),
+primary key (id_projeto)
 );
