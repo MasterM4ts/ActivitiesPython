@@ -83,3 +83,17 @@ INSERT INTO EX2_PRODUTO(codproduto,descricao,quantidade) VALUES (null , "TV 4K S
 select * from EX2_PRODUTO;
 
 
+INSERT INTO EX2_PEDIDO(codpedido, datapedido, nf, valortotal, codcliente) VALUES (null, "2023-12-01", "Notebook - Lenovo", 2500, 1);
+INSERT INTO EX2_PEDIDO(codpedido, datapedido, nf, valortotal, codcliente) VALUES (null, "2023-09-12", "Computador de Mesa Gamer", 5500, 2);
+INSERT INTO EX2_PEDIDO(codpedido, datapedido, nf, valortotal, codcliente) VALUES (null, "2023-11-22", "Produtos de Cabeleireiro", 2000, 3);
+INSERT INTO EX2_PEDIDO(codpedido, datapedido, nf, valortotal, codcliente) VALUES (null, "2023-06-11", "Placas de Marceneiro", 7000, 4);
+INSERT INTO EX2_PEDIDO(codpedido, datapedido, nf, valortotal, codcliente) VALUES (null, "2023-09-11", "Materiais de Construção", 10000, 6);
+select * from EX2_PEDIDO;
+
+
+INSERT INTO EX2_ITEMPEDIDO(numeroitem, valorunitario, quantidade, codpedido, codproduto) VALUES (null, 2500, 1, 1, 1);
+INSERT INTO EX2_ITEMPEDIDO(numeroitem, valorunitario, quantidade, codpedido, codproduto) VALUES (null, 500, 1, 2, 5);
+INSERT INTO EX2_ITEMPEDIDO(numeroitem, valorunitario, quantidade, codpedido, codproduto) VALUES (null, 1500, 1, 2, 6);
+INSERT INTO EX2_ITEMPEDIDO(numeroitem, valorunitario, quantidade, codpedido, codproduto) VALUES (null, 3500, 1, 2, 4);
+INSERT INTO EX2_ITEMPEDIDO(numeroitem, valorunitario, quantidade, codpedido, codproduto) VALUES (null, 2500, 1, 3, 3);
+select * from EX2_ITEMPEDIDO;
