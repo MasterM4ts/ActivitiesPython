@@ -94,4 +94,5 @@ create table estoque_produtos(
     insert into estoque_produtos values (null,100,5,2);
     insert into estoque_produtos values (null,100,5,3);
     insert into estoque_produtos values (null,100,5,4);
-    insert into estoque_produtos values (null,100,5,5);nome
+    insert into estoque_produtos values (null,100,5,5);
+    
