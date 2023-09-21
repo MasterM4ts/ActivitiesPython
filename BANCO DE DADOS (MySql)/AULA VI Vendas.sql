@@ -211,7 +211,7 @@ ALTER TABLE VENDEDOR ADD CONSTRAINT FK_VENDEDOR_1 FOREIGN KEY (CODSETOR) REFEREN
 select CODCID from CIDADE where CODCID = (select max(CODCID) from CIDADE);
 select CODCLI from CLIENTE where CODCLI = (select max(CODCLI) from CLIENTE);
 select CODPROD from PRODUTO where CODPROD = (select max(CODPROD) from PRODUTO);
-
+select CODSETOR from SETOR where CODSETOR = (select max(CODSETOR) from SETOR);
 select NUMPED from PEDIDO where NUMPED = (select max(NUMPED) from PEDIDO);
 select SALARIO from VENDEDOR where SALARIO = (select max(SALARIO) from VENDEDOR);
 select NOMEVEND,SALARIO from VENDEDOR where SALARIO = (select max(SALARIO) from VENDEDOR);
@@ -221,5 +221,5 @@ select NUMPED, CODVEND from PEDIDO where CODVEND = (select max(CODVEND) from PED
 select NUMPED, CODVEND from PEDIDO where CODVEND = (select min(CODVEND) from PEDIDO);
 select CODPROD,VALOR_UN from PRODUTO where VALOR_UN = (select min(VALOR_UN) from PRODUTO);
 select CODPROD,VALOR_UN from PRODUTO where VALOR_UN = (select max(VALOR_UN) from PRODUTO);
-select * from VENDEDOR where CODSETOR = '4';
-select * from PEDIDO where CODCLI = '5';
+select * from VENDEDOR where CODSETOR = (select CODSETOR from SETOR where NOMESETOR = "FERRAMENTAS");
+select * from PEDIDO where CODCLI = (select CODCLI from CLIENTE where NOME = 'Estevan Pereira Cardoso');
