@@ -179,6 +179,14 @@ constraint fk_loja_aquiler foreign key (id_loja) references loja (id_loja),
 primary key (id_alquiler)
 );
 
+create table pelicula_categoria(
+id_pelicula int not null,
+id_categoria int not null,
+data datetime not null,
+constraint fk_categoria foreign key (id_categoria) references categoria (id_categoria),
+primary key (id_pelicula)
+);
+
 create table inventario(
 id_inventario int not null,
 id_pelicula int not null,
