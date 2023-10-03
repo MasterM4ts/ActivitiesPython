@@ -242,4 +242,43 @@ insert into Escolaridade values
     (NULL, 'Doutorado'),
 	(NULL, 'Escola');
     
--- insert into Cadastro_de_Cliente values
+insert into Cadastro_de_Cliente values 
+	('066.467.454-82', 'Matheus', '2.475.684', 15, 2, 1, 1, '(67) 99931-7482', 1, 2),
+    ('123.456.789-01', 'Maria Silva', '3.456.789', 20, 5, 2, 1, '(11) 1234-5678', 4, 4),
+	('987.654.321-09', 'João Pereira','7.654.321', 22, 10, 1, 2, '(21) 9876-5432', 5, 2),
+	('456.789.123-45', 'Ana Santos', '6.789.123', 17, 15, 2, 1, '(31) 4567-8901', 1, 2),
+	('789.123.456-78', 'Pedro Oliveira', '9.123.456', 6, 25, 1, 1, '(41) 7890-1234', 2, 2),
+	('234.567.890-12', 'Laura Martins', '4.567.890', 14, 2, 2, 2, '(51) 2345-6789', 2, 2),
+	('345.678.901-23', 'André Almeida', '5.678.901', 25, 20, 1, 1, '(61) 3456-7890', 5, 2),
+	('567.890.123-45', 'Sofia Costa', '7.890.123', 14, 12, 2, 1, '(71) 5678-9012', 4, 2),
+	('678.901.234-56', 'Lucas Rodrigues', '8.901.234', 12, 8, 1, 1, '(81) 6789-0123', 4, 2),
+	('789.012.345-67', 'Isabela Fernandes', '9.012.345', 1, 6, 2, 2, '(91) 7890-1234', 3, 2),
+	('890.123.456-78', 'Diego Santos', '0.123.456', 7, 7, 1, 1, '(101) 8901-2345', 3, 2),
+	('901.234.567-89', 'Gabriela Lima', '1.234.567', 11, 9, 2, 2, '(111) 9012-3456', 1, 2),
+	('123.890.123-90', 'Mateus Ferreira', '3.890.123', 18, 17, 1, 1, '(121) 1234-5678', 3, 2),
+	('234.567.890-10', 'Carla Oliveira', '4.567.890', 21, 10, 2, 2, '(131) 2345-6789', 1, 2),
+	('345.890.123-21', 'Andréia Santos', '5.890.123', 23, 7, 2, 2, '(141) 3456-7890', 4, 2),
+	('456.123.890-32', 'Rafaela Almeida', '6.123.890', 5, 14, 2, 1, '(151) 4567-8901', 1, 2),
+	('567.234.890-43', 'Gustavo Silva', '7.234.890', 10, 22, 1, 2, '(161) 5678-9012', 3, 2),
+	('678.345.890-54', 'Carolina Rodrigues', '8.345.890', 2, 21, 2, 1, '(171) 6789-0123', 1, 2),
+	('789.456.123-65', 'Thiago Costa', '9.456.123', 1, 19, 1, 1, '(181) 7890-1234', 5, 2),
+	('890.567.234-76', 'Juliana Fernandes', '0.567.234', 16, 20, 2, 1, '(191) 8901-2345', 2, 2),
+	('901.678.345-87', 'Eduardo Lima', '1.678.345', 8, 23, 1, 2, '(201) 9012-3456', 1, 2);
+    
+
+select CC.NOME, C.CIDADE from Cadastro_de_Cliente as CC join Cidade as C on CC.ID_CIDADE = C.ID_CIDADE;
+select CC.NOME, E.ESTADO from Cadastro_de_Cliente as CC join Estado as E on CC.ID_ESTADO = E.ID_ESTADO;
+select CC.NOME, CC.CPF, R.RACA from Cadastro_de_Cliente as CC join Raca as R on CC.ID_RACA = R.ID_RACA;
+select CC.NOME, N.NACIONALIDADE from Cadastro_de_Cliente as CC join Nacionalidade as N on CC.ID_NACIONALIDADE = N.ID_NACIONALIDADE;
+select CC.NOME, ES.ESCOLARIDADE from Cadastro_de_Cliente as CC join Escolaridade as ES on CC.ID_ESCOLARIDADE = ES.ID_ESCOLARIDADE;
+
+select CC.NOME, C.CIDADE, E.ESTADO from Cadastro_de_Cliente as CC join Cidade as C on CC.ID_CIDADE = C.ID_CIDADE 
+join Estado as E on CC.ID_ESTADO = E.ID_ESTADO;
+
+select CC.NOME, C.CIDADE, E.ESTADO, CC.FONE, CC.RG, S.SEXO, N.NACIONALIDADE, R.RACA, ES.ESCOLARIDADE from Cadastro_de_Cliente as CC 
+join Cidade as C on CC.ID_CIDADE = C.ID_CIDADE 
+join Estado as E on CC.ID_ESTADO = E.ID_ESTADO 
+join Sexo as S on CC.ID_SEXO = S.ID_SEXO 
+join Nacionalidade as N on CC.ID_NACIONALIDADE = N.ID_NACIONALIDADE 
+join Raca as R on CC.ID_RACA = R.ID_RACA 
+join Escolaridade as ES on CC.ID_ESCOLARIDADE = ES.ID_ESCOLARIDADE;
