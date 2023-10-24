@@ -85,118 +85,385 @@ VALUES
     ('Squanch Games', ' Burbank, California, USA', 'https://squanchgames.com'),
     ('The Astronauts', 'Varsóvia, Polônia', 'https://www.theastronauts.com/');
 
-select name,headquarters_location from Developers where headquarters_location like '%USA';
-select * from Games where ;
-select * from Purchases where ;
-
-
 -- Inserir dados na tabela Games
 INSERT INTO Games (title, release_date, price, developer_id)
 VALUES
-    ('Fortnite', '2017-07-25', 0.00, 1), -- Epic Games
-    ('Assassin\'s Creed Valhalla', '2020-11-10', 59.99, 2), -- Ubisoft
-    ('FIFA 22', '2021-10-01', 59.99, 3), -- Electronic Arts
-    ('Grand Theft Auto V', '2013-09-17', 29.99, 4), -- Rockstar Games
-    ('Cyberpunk 2077', '2020-12-10', 49.99, 5), -- CD Projekt
-    ('Portal 2', '2011-04-18', 19.99, 6), -- Valve Corporation
-    ('Final Fantasy VII Remake', '2020-04-10', 59.99, 7), -- Square Enix
-    ('Resident Evil Village', '2021-05-07', 49.99, 8), -- Capcom
-    ('The Elder Scrolls V: Skyrim', '2011-11-11', 19.99, 9), -- Bethesda Softworks
-    ('Metal Gear Solid V: The Phantom Pain', '2015-09-01', 29.99, 10), -- Konami
-    ('Tekken 7', '2017-06-02', 39.99, 11), -- Bandai Namco Entertainment
-    ('Sonic Mania', '2017-08-15', 19.99, 12), -- Sega
-    ('Diablo III', '2012-05-15', 19.99, 13), -- Blizzard Entertainment
-    ('Halo Infinite', '2021-12-08', 59.99, 14), -- 343 Industries
-    ('Destiny 2', '2017-10-24', 0.00, 15), -- Bungie
-    ('Mass Effect Legendary Edition', '2021-05-14', 59.99, 16), -- BioWare
-    ('Deus Ex: Mankind Divided', '2016-08-23', 29.99, 17), -- Eidos-Montreal
-    ('Apex Legends', '2019-02-04', 0.00, 18), -- Respawn Entertainment
-    ('Borderlands 3', '2019-09-13', 59.99, 19), -- Gearbox Software
-    ('Mortal Kombat 11', '2019-04-23', 49.99, 20), -- NetherRealm Studios
-    ('Control', '2019-08-27', 29.99, 21), -- Remedy Entertainment
-    ('Call of Duty: Black Ops Cold War', '2020-11-13', 59.99, 22), -- Treyarch
-    ('Spider-Man: Miles Morales', '2020-11-12', 49.99, 23), -- Insomniac Games
-    ('The Outer Worlds', '2019-10-25', 29.99, 24), -- Obsidian Entertainment
-    ('Hitman 3', '2021-01-20', 59.99, 25), -- Square Enix Montreal
-    ('League of Legends', '2009-10-27', 0.00, 26), -- Riot Games
-    ('Total War: Three Kingdoms', '2019-05-23', 59.99, 27), -- Creative Assembly
-    ('Psychonauts 2', '2021-08-25', 29.99, 28), -- Double Fine Productions
-    ('Horizon Zero Dawn', '2020-08-07', 49.99, 29), -- Guerrilla Games
-    ('Divinity: Original Sin 2', '2017-09-14', 39.99, 30), -- Larian Studios
-    ('Fall Guys: Ultimate Knockout', '2020-08-04', 19.99, 31), -- Mediatonic
-    ('Middle-earth: Shadow of War', '2017-10-10', 29.99, 32), -- Monolith Productions
-    ('Inside', '2016-07-07', 19.99, 33), -- Playdead
-    ('Yooka-Laylee', '2017-04-11', 19.99, 34), -- Playtonic Games
-    ('Detroit: Become Human', '2019-12-12', 39.99, 35), -- Quantic Dream
-    ('Outlast', '2013-09-04', 19.99, 36), -- Red Barrels
-    ('Titanfall 2', '2016-10-28', 29.99, 37), -- Respawn Entertainment
-    ('Ruined King: A League of Legends Story', '2021-11-16', 29.99, 38), -- Riot Forge
-    ('Gears 5', '2019-09-06', 39.99, 39), -- Splash Damage
-    ('ARK: Survival Evolved', '2015-08-27', 49.99, 40), -- Studio Wildcard
-    ('Dying Light', '2015-01-27', 29.99, 41), -- Techland
-    ('Gears of War 5', '2019-09-10', 59.99, 42), -- The Coalition
-    ('Back 4 Blood', '2021-10-12', 59.99, 43), -- Turtle Rock Studios
-    ('State of Decay 2', '2018-05-22', 29.99, 44), -- Undead Labs
-    ('Crash Bandicoot 4: It\'s About Time', '2020-10-02', 59.99, 45), -- Vicarious Visions
-    ('Spec Ops: The Line', '2012-06-26', 19.99, 46), -- Yager Development
-    ('The Elder Scrolls Online', '2014-04-04', 29.99, 47), -- Zenimax Online Studios
-    ('Doom Eternal', '2020-03-20', 59.99, 48), -- Zenimax Media
-    ('High On Life', '2022-12-13', 107.99, 49), -- Squanch Games
-    ('Witchfire', '2023-09-20', 107.99, 50);
-
+    ('Assassin\'s Creed® I: Director\'s Cut','2008-04-09',19.99,1),
+    ('LEGO® Batman™: The Videogame','2008-09-28',19.99,2),
+    ('World of Goo','2008-10-13',14.99,3),
+    ('Shadow Complex Remastered','2009-08-19',14.99,4),
+    ('Metro 2033 Redux','2010-03-16',19.99,5),
+    ('Batman Arkham Asylum Game of the Year Edition','2010-03-26',19.99,6),
+    ('Limbo','2010-07-30',9.99,7),
+    ('Costume Quest','2010-10-19',9.99,8),
+    ('Super Meat Boy','2010-10-20',14.99,9),
+    ('The Walking Dead: Season One','2012-04-24',14.99,10),
+    ('Alan Wake\'s American Nightmare','2012-05-22',8.99,11),
+    ('Ticket to Ride','2012-05-24',9.99,12),
+    ('LEGO® Batman™ 2: DC Super Heroes','2012-06-22',19.99,13),
+    ('Batman Arkham City Game of the Year Edition','2012-09-07',19.99,14),
+    ('Little Inferno','2012-11-19',14.99,15),
+    ('Far Cry®3 Standard Edition','2013-01-15',19.99,16),
+    ('The Bridge','2013-02-22',9.99,17),
+    ('The Walking Dead: Season Two','2013-02-23',14.99,18),
+    ('Fez','2013-04-13',9.99,19),
+    ('South Park™: The Stick of Truth™','2014-03-04',29.99,20),
+    ('Child of Light: Ultimate Edition','2014-04-30',19.99,21),
+    ('Transistor','2014-05-20',19.99,22),
+    ('FTL: Faster Than Light','2014-09-14',9.99,23),
+    ('LEGO® Batman™ 3: Beyond Gotham','2014-11-11',19.99,24),
+    ('Assassin\'s Creed Unity','2014-11-11',29.99,25),
+    ('This War of Mine','2014-11-14',19.99,26),
+    ('The Jackbox Party Pack','2014-11-18',24.99,27),
+    ('FAR CRY 4','2014-11-18',29.99,28),
+    ('The Talos Principle','2014-12-11',39.99,29),
+    ('UNREAL TOURNAMENT EDITOR','2015-02-09',0,30),
+    ('Unreal Tournament','2015-02-10',0,31),
+    ('AXIOM VERGE','2015-05-14',19.99,32),
+    ('Metro Last Light Redux','2015-06-02',19.99,33),
+    ('Batman Arkham Knight','2015-06-23',19.99,34),
+    ('Valiant Hearts: The Great War','2015-06-25',14.99,35),
+    ('ARK Modkit','2015-07-20',0,36),
+    ('SOMA','2015-09-22',29.99,'37'),
+    ('The Jackbox Party Pack 2','2015-10-13',24.99,38),
+    ('Human Resource Machine','2015-10-15',14.99,39),
+    ('Rebel Galaxy','2015-10-20',19.99,40),
+    ('Kingdom New Lands','2015-10-21',14.99,41),
+    ('Darksiders II Deathinitive Edition','2015-11-05',29.99,42),
+    ('Rainbow Six Siege Standard Edition','2015-12-01',19.99,43),
+    ('The Witness','2016-01-26',39.99,44),
+    ('Layers of Fear: Masterpiece Edition','2016-02-15',22.99,45),
+    ('Alan Wake','2016-02-16',14.99,46),
+    ('The Walking Dead: Michonne - A Telltale Miniseries','2016-02-23',14.99,47),
+    ('SUPERHOT','2016-02-24',24.99,48),
+    ('Far Cry Primal Standard Edition','2016-03-01',29.99,49),
+    ('Tom Clancy\'s The Division','2016-03-08',29.99,1),
+    ('Trackmania Turbo','2016-03-24',39.99,2),
+    ('Hyper Light Drifter','2016-03-31',19.99,3),
+    ('Enter the Gungeon','2016-04-05',14.99,4),
+    ('Squad Editor','2016-06-09',0,5),
+    ('Drawful 2','2016-06-21',9.99,6),
+    ('INSIDE','2016-07-07',19.99,7),
+    ('ABZU','2016-08-02',19.99,8),
+    ('VR Funhouse','2016-08-31',0,9),
+    ('Watch Dogs 2 Standard Edition','2016-11-15',59.99,10),
+    ('Darksiders Warmastered Edition','2016-11-26',19.99,11),
+    ('Steep Standard Edition','2016-12-02',29.99,12),
+    ('The Walking Dead: A New Frontier','2016-12-20',14.99,13),
+    ('Conan Exiles Modkit','2017-01-17',0,14),
+    ('For Honor Standard Edition','2017-02-14',29.99,15),
+    ('Stories Untold','2017-02-27',9.99,16),
+    ('Thimbleweed Park','2017-03-30',19.99,17),
+    ('Yooka-Laylee and the Impossible Lair','2017-04-11',29.99,18),
+    ('Everything','2017-04-21',14.99,19),
+    ('What Remains of Edith Finch','2017-04-25',19.99,20),
+    ('RiME','2017-05-26',29.99,21),
+    ('Conarium','2017-06-06',19.99,22),
+    ('The End is Nigh','2017-07-12',14.99,23),
+    ('Fortnite','2017-07-21',0,24),
+    ('Sundered: Eldritch Edition','2017-07-28',19.99,25),
+    ('Slime Rancher','2017-08-01',19.99,26),
+    ('Last Day of June','2017-08-31',19.99,27),
+    ('RUINER','2017-09-26',19.99,28),
+    ('South Park™: The Fractured But Whole™ Standard Edition','2017-10-16',49.99,29),
+    ('The Jackbox Party Pack 5','2017-10-17',29.99,30),
+    ('The Jackbox Party Pack 4','2017-10-19',24.99,31),
+    ('Assassin\'s Creed Origins Standard Edition','2017-10-26',59.99,32),
+    ('Gorogoa','2017-12-14',14.99,33),
+    ('Celeste','2018-01-05',19.99,34),
+    ('ATLAS Mod Kit','2018-01-10',0,35),
+    ('InnerSpace','2018-01-16',19.99,36),
+    ('Subnautica','2018-01-23',29.99,'37'),
+    ('Kingdom Come: Deliverance','2018-02-13',29.99,38),
+    ('Into the Breach','2018-02-27',14.99,39),
+    ('Surviving Mars','2018-03-15',29.99,40),
+    ('Q.U.B.E. 2','2018-03-18',24.99,41),
+    ('Far Cry 5 Standard Edition','2018-03-27',59.99,42),
+    ('Minit','2018-04-03',9.99,43),
+    ('Tom Clancy\'s Ghost Recon Wildlands Standard Edition','2018-04-10',49.99,44),
+    ('City of Brass','2018-05-04',19.99,45),
+    ('Moonlighter','2018-05-29',19.99,46),
+    ('Vampyr','2018-06-05',39.99,47),
+    ('GNOG','2018-06-17',9.99,48),
+    ('Battalion 1944 Development Toolkit','2018-07-06',0,49),
+    ('Overcooked','2018-08-07',16.99,50),
+    ('The Walking Dead: Final Season','2018-08-14',19.99,1),
+    ('7 Billion Humans','2018-08-23',14.99,2),
+    ('Donut County','2018-08-28','1299',3),
+    ('Speed Brawl','2018-09-18',19.99,4),
+    ('Assassins Creed Odyssey Standard Edition','2018-10-05',59.99,5),
+    ('Jackbox Party Pack 3','2018-10-18',24.99,6),
+    ('Bad North','2018-11-16',14.99,7),
+    ('Darksiders III','2018-11-27',59.99,8),
+    ('RollerCoaster Tycoon Adventures','2018-11-29',29.99,9),
+    ('Mutant Year Zero: Road to Eden','2018-12-04',34.99,10),
+    ('Shadow Tactics: Blades of the Shogun','2018-12-06',39.99,11),
+    ('Hello Neighbor: Hide and Seek','2018-12-07',29.99,12),
+    ('Ashen','2018-12-07',39.99,13),
+    ('Hello Neighbor','2018-12-08',29.99,14),
+    ('My Time At Portia','2019-01-15',29.99,15),
+    ('Oxenfree','2019-01-15',9.99,16),
+    ('Flower','2019-02-14',6.99,17),
+    ('Metro Exodus Standard Edition','2019-02-15',29.99,18),
+    ('Far Cry New Dawn Standard Edition','2019-02-15',39.99,19),
+    ('Trials Rising Standard Edition','2019-02-26',19.99,20),
+    ('APE OUT','2019-02-28',14.99,21),
+    ('Helium Rain','2019-03-01',0,22),
+    ('Operencia: The Stolen Sun','2019-03-08',29.99,23),
+    ('The Division 2 Standard Edition','2019-03-15',29.99,24),
+    ('Satisfactory','2019-03-19',29.99,25),
+    ('Outward','2019-03-26',39.99,26),
+    ('Assassin\'s Creed® III: Remastered','2019-03-29',39.99,27),
+    ('Totally Accurate Battle Simulator','2019-04-01',19.99,28),
+    ('Dangerous Driving','2019-04-09',29.99,29),
+    ('Close To The Sun','2019-05-02',19.99,30),
+    ('Shakedown - Hawaii','2019-05-07',19.99,31),
+    ('Diesel Brothers: Truck Building Simulator Editor','2019-05-10',0,32),
+    ('A Plague Tale: Innocence','2019-05-14',39.99,33),
+    ('Observation','2019-05-21',24.99,34),
+    ('Outer Wilds','2019-05-28',24.99,35),
+    ('Anno 1800 Standard Edition','2019-05-30',59.99,36),
+    ('Trover Saves the Universe','2019-06-04',29.99,'37'),
+    ('Journey','2019-06-06',14.99,38),
+    ('Omen Of Sorrow','2019-06-07',19.99,39),
+    ('Heavy Rain','2019-06-24',19.99,40),
+    ('Griftlands','2019-07-11',19.99,41),
+    ('Horace','2019-07-18',14.99,42),
+    ('Beyond Two Souls','2019-07-22',19.99,43),
+    ('Tetris® Effect: Connected','2019-07-23',39.99,44),
+    ('Rebel Galaxy Outlaw','2019-08-13',29.99,45),
+    ('Auto Chess','2019-08-23',0,46),
+    ('Control','2019-08-27',29.99,47),
+    ('Ancestors: The Humankind Odyssey','2019-08-27',39.99,48),
+    ('Atomicrops','2019-09-05',14.99,49),
+    ('WRC 8 FIA World Rally Championship','2019-09-05',29.99,50),
+    ('Falcon Age','2019-09-06',19.99,1),
+    ('The Walking Dead : The Definitive Series','2019-09-10',49.99,2),
+    ('Borderlands 3','2019-09-13',59.99,3),
+    ('Cardpocalypse Standard Edition','2019-09-19',24.99,4),
+    ('Untitled Goose Game','2019-09-20',19.99,5),
+    ('The Sojourn','2019-09-20',24.99,6),
+    ('WHAT THE GOLF?','2019-10-01',19.99,7),
+    ('Ghostbusters: The Video Game Remastered','2019-10-04',24.99,8),
+    ('Ghost Recon Breakpoint Standard Edition','2019-10-04',59.99,9),
+    ('John Wick Hex','2019-10-08',19.99,10),
+    ('A Knights Quest','2019-10-09',24.99,11),
+    ('The Jackbox Party Pack 6','2019-10-17',29.99,12),
+    ('Manifold Garden','2019-10-18',19.99,13),
+    ('The Outer Worlds','2019-10-25',59.99,14),
+    ('Afterparty','2019-10-29',19.99,15),
+    ('ReadySet Heroes','2019-10-29',19.99,16),
+    ('Red Dead Redemption 2','2019-11-05',59.99,17),
+    ('Nuclear Throne','2019-11-07','1199',18),
+    ('Superliminal','2019-11-12',19.99,19),
+    ('Yaga','2019-11-12',24.99,20),
+    ('STAR WARS Jedi: Fallen Order Standard Edition','2019-11-14',39.99,21),
+    ('Bee Simulator','2019-11-14',19.99,22),
+    ('The Messenger','2019-11-14',19.99,23),
+    ('Shenmue III - Standard Edition','2019-11-19',29.99,24),
+    ('Oxygen Not Included','2019-11-25',24.99,25),
+    ('RAYMAN® LEGENDS','2019-11-29',29.99,26),
+    ('The Wolf Among Us','2019-12-01',14.99,27),
+    ('Arise: A Simple Story','2019-12-03',19.99,28),
+    ('Jotun: Valhalla Edition','2019-12-06',14.99,29),
+    ('MechWarrior 5: Mercenaries Standard Edition','2019-12-10',29.99,30),
+    ('Mechwarrior 5 Modding Toolkit','2019-12-10',0,31),
+    ('Hades','2019-12-10',24.99,32),
+    ('SuperMash','2019-12-10',19.99,33),
+    ('Detroit: Become Human','2019-12-12',39.99,34),
+    ('The Escapists','2019-12-12',17.99,35),
+    ('Wattam','2019-12-17',19.99,36),
+    ('The Telltale Batman Shadows Edition','2019-12-17',29.99,'37'),
+    ('Hello Neighbor Mod Kit','2019-12-18',0,38),
+    ('TowerFall Ascension','2019-12-31',19.99,39),
+    ('Magic: The Gathering Arena','2020-01-16',0,40),
+    ('Journey to the Savage Planet','2020-01-28',29.99,41),
+    ('Days of War Map Editor','2020-01-30',0,42),
+    ('Zombie Army 4: Dead War','2020-02-04',49.99,43),
+    ('Carcassonne','2020-02-06',9.99,44),
+    ('Aztez','2020-02-06',19.99,45),
+    ('CORRUPTION 2029','2020-02-07',19.99,46),
+    ('Mars 2030 Editor','2020-02-08',0,47),
+    ('Faeria','2020-02-13',19.99,48),
+    ('Far Cry 3: Blood Dragon','2020-02-18',14.99,49),
+    ('Anno 2205 - Standard Edition','2020-02-19',39.99,50),
+    ('Assassin\'s Creed Syndicate Standard Edition','2020-02-20',29.99,1),
+    ('Kine','2020-02-24',14.99,2),
+    ('Torchlight','2020-02-26',14.99,3),
+    ('Foregone','2020-02-26',19.99,4),
+    ('Offworld Trading Company','2020-02-27',29.99,5),
+    ('GoNNER','2020-02-27',9.99,6),
+    ('OVERPASS™','2020-02-27',39.99,7),
+    ('Anodyne 2: Return To Dust','2020-02-28',19.99,8),
+    ('Bloodroots','2020-02-28',19.99,9),
+    ('A Short Hike','2020-03-04',7.99,10),
+    ('Mutazione','2020-03-04',19.99,11),
+    ('State of Decay 2: Juggernaut Edition','2020-03-13',29.99,12),
+    ('UNO Standard Edition','2020-03-17',9.99,13),
+    ('MONOPOLY® PLUS','2020-03-17',14.99,14),
+    ('Insurgency: Sandstorm - Mod Tools & Editor','2020-03-17',0,15),
+    ('Dauntless','2020-03-19',0,16),
+    ('Watch Dogs Standard Edition','2020-03-19',29.99,17),
+    ('Paladins','2020-03-24',0,18),
+    ('Assassin\'s Creed Rogue Standard Edition','2020-03-25',19.99,19),
+    ('Tormentor x Punisher','2020-03-26',7.99,20),
+    ('Figment','2020-03-26',19.99,21),
+    ('The Stanley Parable','2020-03-26',14.99,22),
+    ('Genesis Alpha One Deluxe Edition','2020-03-27',29.99,23),
+    ('Totally Reliable Delivery Service Standard Edition','2020-04-01',14.99,24),
+    ('Sherlock Holmes: Crimes and Punishments','2020-04-02',29.99,25),
+    ('Hob','2020-04-02',19.99,26),
+    ('Gone Home','2020-04-02',14.99,27),
+    ('Industries of Titan','2020-04-14',29.99,28),
+    ('Wheels of Aurelia','2020-04-16',14.99,29),
+    ('Just Cause 4 Reloaded','2020-04-23',39.99,30),
+    ('For The King','2020-04-23',19.99,31),
+    ('SMITE','2020-04-28',0,32),
+    ('SnowRunner','2020-04-28',29.99,33),
+    ('Dread Nautical','2020-04-29',19.99,34),
+    ('Levelhead','2020-04-30',19.99,35),
+    ('Amnesia: The Dark Descent','2020-04-30',19.99,36),
+    ('Crashlands','2020-04-30',14.99,'37'),
+    ('Might & Magic: Chess Royale','2020-05-05',0,38),
+    ('Old World','2020-05-05',39.99,39),
+    ('Death Coming','2020-05-07',6.99,40),
+    ('Before We Leave','2020-05-08',19.99,41),
+    ('Huntdown','2020-05-12',19.99,42),
+    ('The Witcher 3: Wild Hunt - Game of the Year Edition','2020-05-14',49.96,43),
+    ('Grand Theft Auto V: Premium Edition','2020-05-14',29.99,44),
+    ('Sid Meier\'s Civilization® VI','2020-05-21',59.99,45),
+    ('Saints Row®: The Third™  Remastered','2020-05-22',39.99,46),
+    ('Maneater','2020-05-22',39.99,47),
+    ('SLUDGE LIFE','2020-05-28',14.99,48),
+    ('Borderlands: The Handsome Collection','2020-05-28',59.99,49),
+    ('Poly Bridge 2','2020-05-28',14.99,50),
+    ('Fortnite', '2017-07-25', 0.00, 1),
+    ('Grand Theft Auto V', '2013-09-17', 29.99, 4), 
+    ('Cyberpunk 2077', '2020-12-10', 49.99, 5), 
+    ('Portal 2', '2011-04-18', 19.99, 6), 
+    ('Final Fantasy VII Remake', '2020-04-10', 59.99, 7), 
+    ('Resident Evil Village', '2021-05-07', 49.99, 8), 
+    ('The Elder Scrolls V: Skyrim', '2011-11-11', 19.99, 9), 
+    ('Metal Gear Solid V: The Phantom Pain', '2015-09-01', 29.99, 10), 
+    ('Tekken 7', '2017-06-02', 39.99, 11), 
+    ('Sonic Mania', '2017-08-15', 19.99, 12), 
+    ('Diablo III', '2012-05-15', 19.99, 13), 
+    ('Halo Infinite', '2021-12-08', 59.99, 14), 
+    ('Destiny 2', '2017-10-24', 0.00, 15), 
+    ('Mass Effect Legendary Edition', '2021-05-14', 59.99, 16), 
+    ('Deus Ex: Mankind Divided', '2016-08-23', 29.99, 17), 
+    ('Apex Legends', '2019-02-04', 0.00, 18), 
+    ('Borderlands 3', '2019-09-13', 59.99, 19),
+    ('Control', '2019-08-27', 29.99, 21),
+    ('Call of Duty: Black Ops Cold War', '2020-11-13', 59.99, 22),
+    ('Spider-Man: Miles Morales', '2020-11-12', 49.99, 23), 
+    ('The Outer Worlds', '2019-10-25', 29.99, 24), 
+    ('Hitman 3', '2021-01-20', 59.99, 25), 
+    ('League of Legends', '2009-10-27', 0.00, 26), 
+    ('Total War: Three Kingdoms', '2019-05-23', 59.99, 27), 
+    ('Psychonauts 2', '2021-08-25', 29.99, 28),
+    ('Horizon Zero Dawn', '2020-08-07', 49.99, 29), 
+    ('Divinity: Original Sin 2', '2017-09-14', 39.99, 30), 
+    ('Fall Guys: Ultimate Knockout', '2020-08-04', 19.99, 31), 
+    ('Middle-earth: Shadow of War', '2017-10-10', 29.99, 32), 
+    ('Inside', '2016-07-07', 19.99, 33), 
+    ('Yooka-Laylee', '2017-04-11', 19.99, 34), 
+    ('Detroit: Become Human', '2019-12-12', 39.99, 35), 
+    ('Outlast', '2013-09-04', 19.99, 36), 
+    ('Titanfall 2', '2016-10-28', 29.99, 37),
+    ('Ruined King: A League of Legends Story', '2021-11-16', 29.99, 38),
+    ('Gears 5', '2019-09-06', 39.99, 39), 
+    ('ARK: Survival Evolved', '2015-08-27', 49.99, 40), 
+    ('Dying Light', '2015-01-27', 29.99, 41),
+    ('Gears of War 5', '2019-09-10', 59.99, 42), 
+    ('Back 4 Blood', '2021-10-12', 59.99, 43), 
+    ('State of Decay 2', '2018-05-22', 29.99, 44), 
+    ('Crash Bandicoot 4: It\'s About Time', '2020-10-02', 59.99, 45), 
+    ('Spec Ops: The Line', '2012-06-26', 19.99, 46), 
+    ('The Elder Scrolls Online', '2014-04-04', 29.99, 47), 
+    ('Doom Eternal', '2020-03-20', 59.99, 48), 
+    ('High On Life', '2022-12-13', 107.99, 49), 
+    ('Witchfire', '2023-09-20', 107.99, 50),
+    ('Assassin\'s Creed Valhalla', '2020-11-10', 59.99, 2), 
+    ('FIFA 22', '2021-10-01', 59.99, 3);
 
 -- Inserir dados fictícios na tabela Purchases
 INSERT INTO Purchases (game_id, purchase_date, user_name)
 VALUES
-  (1, '2023-01-05', 'GrrrlPowa'),
-  (2, '2020-03-20', 'Leon'),
-  (3, '2022-02-15', 'Polly Rocket'),
-  (4, '2015-04-10', 'Painkiller '),
-  (5, '2021-05-22', 'ValsinhaVeneno'),
-  (6, '2012-06-12', 'CRMessi'),
-  (7, '2021-03-28', 'Sara Sahara'),
+  (10, '2023-01-05', 'GrrrlPowa'),
+  (5, '2020-03-20', 'Leon'),
+  (17, '2022-02-15', 'Polly Rocket'),
+  (45, '2015-04-10', 'Painkiller '),
+  (7, '2021-05-22', 'ValsinhaVeneno'),
+  (13, '2012-06-12', 'CRMessi'),
+  (47, '2021-03-28', 'Sara Sahara'),
   (8, '2023-04-05', 'Whiskey'),
   (9, '2012-01-14', 'MoçaTaDiferente'),
-  (10, '2016-02-01', 'Rocks'),
-  (11, '2018-02-25', 'Cover Girl'),
+  (9, '2016-02-01', 'Rocks'),
+  (1, '2018-02-25', 'Cover Girl'),
   (12, '2018-01-17', 'Coyote'),
   (13, '2013-03-05', 'Girllirla'),
-  (14, '2022-03-30', 'Napoleon'),
-  (15, '2020-04-18', 'NinjaKawai'),
+  (11, '2022-03-30', 'Napoleon'),
+  (2, '2020-04-18', 'NinjaKawai'),
   (16, '2023-05-02', 'Zombie'),
   (17, '2017-06-08', 'ByancaNoir'),
-  (18, '2020-01-28', 'Prodigy'),
+  (15, '2020-01-28', 'Prodigy'),
   (19, '2020-02-10', 'Aguja'),
-  (20, '2020-05-16', 'Falcão'),
+  (22, '2020-05-16', 'Falcão'),
   (21, '2020-04-22', 'Mika'),
-  (22, '2022-06-30', 'Cobra'),
-  (23, '2022-05-08', 'Nathy'),
+  (3, '2022-06-30', 'Cobra'),
+  (25, '2022-05-08', 'Nathy'),
   (24, '2023-04-02', 'Mcgregor'),
-  (25, '2023-02-12', 'BeClare'),
+  (29, '2023-02-12', 'BeClare'),
   (26, '2022-02-19', 'Scorpion'),
   (27, '2023-01-24', 'Maya'),
   (28, '2023-03-15', 'Satoshi'),
-  (29, '2023-06-05', 'Ostarha'),
-  (30, '2023-01-29', 'Hazzard'),
+  (8, '2023-06-05', 'Ostarha'),
+  (45, '2023-01-29', 'Hazzard'),
   (31, '2023-04-14', 'Labirinto de Pandora'),
   (32, '2020-06-25', 'Torpedo'),
-  (33, '2023-05-12', 'PinaColada'),
+  (4, '2023-05-12', 'PinaColada'),
   (34, '2023-03-10', 'Jaguar'),
   (35, '2022-02-06', 'Tempestade de Amor'),
-  (36, '2023-03-25', 'RockyBalboa'),
-  (37, '2014-05-18', 'Sniper do Lar'),
-  (38, '2022-02-22', 'Sniper'),
-  (39, '2023-01-10', 'Girassol'),
-  (40, '2022-01-22', 'Naoki'),
+  (20, '2023-03-25', 'RockyBalboa'),
+  (17, '2014-05-18', 'Sniper do Lar'),
+  (30, '2022-02-22', 'Sniper'),
+  (19, '2023-01-10', 'Girassol'),
+  (6, '2022-01-22', 'Naoki'),
   (41, '2023-04-01', 'Cheetara'),
   (42, '2016-06-20', 'Overtaker'),
-  (43, '2018-05-29', 'Sheera'),
-  (44, '2022-03-12', 'Exterminator'),
+  (13, '2018-05-29', 'Sheera'),
+  (2, '2022-03-12', 'Exterminator'),
   (45, '2023-01-08', 'Dona Flor'),
   (46, '2019-06-02', 'Maximus'),
-  (47, '2023-04-16', 'PanificadoraOmega'),
-  (48, '2013-05-05', 'Thor'),
-  (49, '2016-02-03', 'Caramelo'),
-  (50, '2023-01-19', 'Akinori');
+  (50, '2023-04-16', 'PanificadoraOmega'),
+  (44, '2013-05-05', 'Thor'),
+  (15, '2016-02-03', 'Caramelo'),
+  (10, '2023-01-19', 'Akinori');
   
-  
+-- 5 Selects
+SELECT name,headquarters_location FROM Developers WHERE headquarters_location LIKE '%USA';
+SELECT title, release_date FROM Games ORDER BY release_date DESC;
+SELECT user_name, purchase_date FROM Purchases WHERE purchase_date LIKE '2023%';  
+SELECT title, release_date, price FROM Games WHERE price > 50;
+SELECT title, release_date, price FROM Games WHERE price = 0;
+
+-- 5 updates
+UPDATE Games SET title = 'FIFA 22' WHERE title = 'EAFC24';
+UPDATE Games SET price = 59.99 WHERE price = 60.00;
+UPDATE Purchases SET user_name = 'GrrrlPowa' WHERE user_name = 'MasterM4ts';
+UPDATE Games SET title = 'Grand Theft Auto V' WHERE title = 'GTA5';
+UPDATE Developers SET headquarters_location = 'Electronic Arts' WHERE headquarters_location = 'EEEEEEAAAAAAAAA SPORTS (It\' in the game)';
+
+
+-- 5 Deletes
+DELETE FROM Purchases WHERE user_name LIKE '%lo';
+DELETE FROM Games WHERE price > 70;
+DELETE FROM Developers WHERE headquarters_location LIKE '%USA';
+DELETE FROM Purchases WHERE purchase_date LIKE '2023%';
+DELETE FROM Games WHERE title = 'ARK: Survival Evolved' OR title LIKE 'A%';
+
+-- Teste
+SELECT * FROM Games;
+SELECT * FROM Purchases;
+SELECT * FROM Developers;
