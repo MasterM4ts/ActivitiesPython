@@ -8,18 +8,19 @@ from kivy.uix.boxlayout import BoxLayout
 
 class HelloWorld(App):
     def build(self):
-        layout = BoxLayout(orientation = 'vertical')
-        tamanho = '80'
-        self.label = Label(text = "Hello World !!", font_size = tamanho)
-        button  = Button(text='Button', size_hint=(1,0.5))
-        button.bind(on_press = self.on_button)
-        layout.add_widget(self.label)
-        layout.add_widget(button)
-        return layout
+        self.layout = BoxLayout(orientation = 'vertical')
+        self.tamanho = '100'
+        self.label = Label(text = "Hello World !!", font_size = self.tamanho)
+        self.button  = Button(text='Button', size_hint=(1,0.5))
+        self.button.bind(on_press = self.on_button)
+        self.layout.add_widget(self.label)
+        self.layout.add_widget(self.button)
+        return self.layout
     
     def on_button(self, instance):
-        logo = Image(source='Fundo.jpg') 
-        return logo
+        self.label_IMG = Image(source='Fundo.jpg', size_hint = (1, 0.5))
+        return self.layout.add_widget(self.label_IMG) 
+       
 
 if __name__ == '__main__':
     HelloWorld().run()
