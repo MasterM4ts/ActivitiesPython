@@ -5,7 +5,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 
-class First_Botão(App):
+class First_Botao(App):
     def build(self):
         layout = BoxLayout(orientation = 'vertical')
         grid = GridLayout(cols = 1)
@@ -32,4 +32,4 @@ class First_Botão(App):
         
         
 if __name__=="__main__":
-    First_Botão().run()
+    First_Botao().run()

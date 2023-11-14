@@ -1,0 +1,89 @@
+
+MDBoxLayout:
+    orientation: 'vertical'
+
+    MDTopAppBar:
+        title: "MDTopAppBar"
+        use_overflow: True
+        left_action_items: [["menu", lambda x: app.Menu(x), 'Menu', 'Menu']]
+        right_action_items:
+            [['home', lambda x: app.Mudar_Tela('ScreenCadastroCliente'), "Home", "Home"]]
+
+
+    ScreenManager:
+        name: 'ScreenPrincipal'
+        id: screen_manager
+        
+        MDScreen:
+            name: 'ScreenIniciar'
+            MDRaisedButton:
+                text: 'Entrar'
+                size_hint: 0.3, 0.1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                on_press: app.Mudar_Tela('ScreenCadastroCliente')
+    
+        MDScreen:
+            name: 'ScreenCadastroCliente'
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.8, 0.7
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                
+
+                MDLabel:
+                    text: 'Cadastro de Cliente'
+                    font_size: '40px'
+                    halign: "center"
+                    bold: True
+                    theme_text_color: 'Primary'
+
+                MDTextField:
+                    hint_text: 'Nome'
+                    helper_text: 'Preencha seu nome'
+                    helper_text_mode: "on_focus"
+                    helper_text_mode: "on_error"
+                    
+
+                MDTextField:
+                    hint_text: 'E-mail'
+                    helper_text: 'Preencha seu e-mail'
+                    helper_text_mode: 'on_focus'
+                    
+
+                MDTextField:
+                    hint_text: 'Senha'
+                    helper_text: 'Crie uma senha'
+                    helper_text_mode: 'on_focus'
+                    password: True
+                    max_text_length: 12
+
+
+                MDTextField:
+                    hint_text: 'Telefone'
+                    helper_text: 'Informe seu telefone'
+                    helper_text_mode: 'on_focus'
+                    max_text_length: 16
+
+                MDRaisedButton:
+                    text: 'Próximo'
+                    size_hint: 0.5, 0
+                    pos_hint: {'center_x': 0.5, 'center_y': 0}
+
+                    on_press: app.Mensagem_Concluido()
+
+
+        MDScreen:
+            name: 'ScreenEditarCliente'
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing: dp(20)
+                padding: dp(48)
+
+
+        MDScreen:
+            name: 'ScreenExcluirCliente'
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing: dp(20)
+                padding: dp(48)
