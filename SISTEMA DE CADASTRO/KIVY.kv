@@ -34,62 +34,90 @@ MDBoxLayout:
     
         MDScreen:
             name: 'ScreenCadastroCliente'
+                
+            MDScrollView:
+                size_hint: 0.85, 0.95
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                GridLayout:
+                    cols: 1
+                    padding: "30dp"
+                    spacing: "10dp"
+                    size_hint_y: None
+                    height: self.minimum_height  
+
+                    MDLabel:
+                        text: 'Cadastro de Cliente'
+                        font_size: '40px'
+                        halign: "center"
+                        bold: True
+                        theme_text_color: 'Primary'
+
+                    MDTextField:
+                        hint_text: 'Nome'
+                        helper_text: 'Preencha seu nome'
+                        helper_text_mode: "on_focus"
+                        
+                    MDTextField:
+                        hint_text: 'Sobrenome'
+                        helper_text: 'Preencha seu sobrenome'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'Idade'
+                        helper_text: 'Preencha sua idade'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'RG'
+                        helper_text: 'Preencha com o seu RG'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'CPF'
+                        helper_text: 'Preencha com o seu CPF'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'Estado'
+                        helper_text: 'Preencha com o seu estado'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'Cidade'
+                        helper_text: 'Preencha com a sua cidade'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'Endereço'
+                        helper_text: 'Preencha seu endereço'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'Telefone'
+                        helper_text: 'Preencha com o seu telefone'
+                        helper_text_mode: 'on_focus'
+
+                    MDTextField:
+                        hint_text: 'E-mail'
+                        helper_text: 'Preencha seu e-mail'
+                        helper_text_mode: 'on_focus'
+
+                    MDRaisedButton:
+                        text: 'CADASTRAR'
+                        size_hint: 0.5, None
+
+                        on_press: app.Mensagem_Concluido()
+
+
+        MDScreen:
+            name: 'ScreenEditarCliente'
 
             MDBoxLayout:
                 orientation: 'vertical'
                 size_hint: 0.8, 0.7
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                
-
-                MDLabel:
-                    text: 'Cadastro de Cliente'
-                    font_size: '40px'
-                    halign: "center"
-                    bold: True
-                    theme_text_color: 'Primary'
-
-                MDTextField:
-                    hint_text: 'Nome'
-                    helper_text: 'Preencha seu nome'
-                    helper_text_mode: "on_focus"
-                    helper_text_mode: "on_error"
-                    
-
-                MDTextField:
-                    hint_text: 'E-mail'
-                    helper_text: 'Preencha seu e-mail'
-                    helper_text_mode: 'on_focus'
-                    
-
-                MDTextField:
-                    hint_text: 'Senha'
-                    helper_text: 'Crie uma senha'
-                    helper_text_mode: 'on_focus'
-                    password: True
-                    max_text_length: 12
-
-
-                MDTextField:
-                    hint_text: 'Telefone'
-                    helper_text: 'Informe seu telefone'
-                    helper_text_mode: 'on_focus'
-                    max_text_length: 16
-
-                MDRaisedButton:
-                    text: 'Próximo'
-                    size_hint: 0.5, 0
-                    pos_hint: {'center_x': 0.5, 'center_y': 0}
-
-                    on_press: app.Mensagem_Concluido()
-
-
-        MDScreen:
-            name: 'ScreenEditarCliente'
-            MDBoxLayout:
-                orientation: 'vertical'
-                spacing: dp(20)
-                padding: dp(48)
-
+            
 
         MDScreen:
             name: 'ScreenExcluirCliente'
