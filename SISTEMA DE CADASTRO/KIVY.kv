@@ -7,7 +7,12 @@ MDBoxLayout:
         use_overflow: True
         left_action_items: [["menu", lambda x: app.Menu(x), 'Menu', 'Menu']]
         right_action_items:
-            [['home', lambda x: app.Mudar_Tela('ScreenCadastroCliente'), "Home", "Home"]]
+            [
+            ['home', lambda x: app.Mudar_Tela('ScreenCadastroCliente'), "Home", "Home"],
+            ['Images/Editar.ico', lambda x: app.Mudar_Tela('ScreenEditarCliente'), "Editar", "Editar"],
+            ['Images/Deletar.ico', lambda x: app.Mudar_Tela('ScreenExcluirCliente'), "Deletar", "Deletar"],
+            ['Images/Sair.ico', lambda x: app.Sair(), "Sair", "Sair"],
+            ]
 
 
     ScreenManager:
@@ -31,6 +36,11 @@ MDBoxLayout:
                 size_hint: 0.3, 0.1
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_press: app.Mudar_Tela('ScreenCadastroCliente')
+            
+            AsyncImage:
+                source: 'Images/Fundo_Inicial.png'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+
     
         MDScreen:
             name: 'ScreenCadastroCliente'

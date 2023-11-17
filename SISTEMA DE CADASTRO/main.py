@@ -21,7 +21,7 @@ class App(MDApp):
         self.theme_cls.theme_style = 'Dark'
         self.theme_cls.primary_palette = 'Orange'
         
-        Itens = ['Cadastrar', 'Editar', 'Excluir']
+        Itens = ['Cadastrar', 'Editar', 'Excluir', 'Sair']
         menu_items = [
             {
                 "viewclass": "OneLineListItem",
