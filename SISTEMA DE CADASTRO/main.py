@@ -21,18 +21,19 @@ class App(MDApp):
         self.theme_cls.theme_style = 'Dark'
         self.theme_cls.primary_palette = 'Orange'
         
-        Itens = ['Cadastrar', 'Editar', 'Excluir', 'Sair']
+        Itens = ['MENU', 'Cadastrar', 'Editar', 'Excluir', 'Sair']
+        
         menu_items = [
             {
                 "viewclass": "OneLineListItem",
                 "text": f"{i}",
                 "height": dp(55),
-                "on_release": lambda x = f"Item {i}": self.menu_callback(x),
-             } for i in Itens
+                "on_release": lambda x = f"Item {i}": self.munu_callback(),
+             } for i in Itens 
         ]
         self.menu = MDDropdownMenu(
             items = menu_items,
-            width_mult = 3,
+            width_mult = 4,
         )
         
         return Builder.load_file('KIVY.kv')
@@ -40,9 +41,11 @@ class App(MDApp):
     def Menu(self, button):
         self.menu.caller = button
         self.menu.open()
+        
     
     def Mudar_Tela(self, screen_name):
         self.root.ids.screen_manager.current = screen_name
+
 
     def Sair(self):
         self.stop()
@@ -59,6 +62,7 @@ class App(MDApp):
                 ],
             )
         self.dialog.open()
+
 
     def close_dialog(self, obj):
         self.dialog.dismiss()
