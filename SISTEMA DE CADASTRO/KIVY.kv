@@ -1,137 +1,157 @@
+MDScreen:
 
-MDBoxLayout:
-    orientation: 'vertical'
+    MDBoxLayout:
+        orientation: 'vertical'
 
-    MDTopAppBar:
-        title: "MDTopAppBar"
-        use_overflow: True
-        left_action_items: [["menu", lambda x: app.Menu(x), 'Menu', 'Menu']]
-        right_action_items:
-            [
-            ['home', lambda x: app.Mudar_Tela('ScreenCadastroCliente'), "Home", "Home"],
-            ['Images/Editar.ico', lambda x: app.Mudar_Tela('ScreenEditarCliente'), "Editar", "Editar"],
-            ['Images/Deletar.ico', lambda x: app.Mudar_Tela('ScreenExcluirCliente'), "Deletar", "Deletar"],
-            ['Images/Sair.ico', lambda x: app.Sair(), "Sair", "Sair"],
-            ]
+        MDTopAppBar:
+            title: "Sistema Cadastral de Cliente"
+            pos_hint: {"top": 1}
+            elevation: 4
+            use_overflow: True
+            left_action_items: [["menu", lambda x: nav_drawer.set_state("open"), 'Menu', 'Menu']]
+            right_action_items:
+                [
+                ['home', lambda x: app.Mudar_Tela('ScreenCadastroCliente'), "Home", "Home"],
+                ['Images/Editar.ico', lambda x: app.Mudar_Tela('ScreenEditarCliente'), "Editar", "Editar"],
+                ['Images/Deletar.ico', lambda x: app.Mudar_Tela('ScreenExcluirCliente'), "Deletar", "Deletar"],
+                ['Images/Sair.ico', lambda x: app.Sair(), "Sair", "Sair"],
+                ]
 
+        MDNavigationLayout:
 
-    ScreenManager:
-        name: 'ScreenPrincipal'
-        id: screen_manager
-        
-        MDScreen:
-            name: 'ScreenIniciar'
-
-            MDLabel:
-                text: 'Bem Vindo Ao Cadastro de Cliente'
-                font_size: '40px'
-                halign: "center"
-                bold: True
-                theme_text_color: 'Primary'
-                size_hint: 0.5, 0
-                pos_hint: {'center_x': 0.5, 'center_y': 0.7}
-
-            MDRaisedButton:
-                text: 'Entrar'
-                size_hint: 0.3, 0.1
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                on_press: app.Mudar_Tela('ScreenCadastroCliente')
-            
-            AsyncImage:
-                source: 'Images/Fundo_Inicial.png'
-                pos_hint: {'center_x': 0.5, 'center_y': 0.2}
-
-    
-        MDScreen:
-            name: 'ScreenCadastroCliente'
+            MDScreenManager:
+                name: 'ScreenPrincipal'
+                id: screen_manager
                 
-            MDScrollView:
-                size_hint: 0.85, 0.95
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-
-                GridLayout:
-                    cols: 1
-                    padding: "30dp"
-                    spacing: "10dp"
-                    size_hint_y: None
-                    height: self.minimum_height  
+                MDScreen:
+                    name: 'ScreenIniciar'
 
                     MDLabel:
-                        text: 'Cadastro de Cliente'
+                        text: 'Bem Vindo Ao Cadastro de Cliente'
                         font_size: '40px'
                         halign: "center"
                         bold: True
                         theme_text_color: 'Primary'
-
-                    MDTextField:
-                        hint_text: 'Nome'
-                        helper_text: 'Preencha seu nome'
-                        helper_text_mode: "on_focus"
-                        
-                    MDTextField:
-                        hint_text: 'Sobrenome'
-                        helper_text: 'Preencha seu sobrenome'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'Idade'
-                        helper_text: 'Preencha sua idade'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'RG'
-                        helper_text: 'Preencha com o seu RG'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'CPF'
-                        helper_text: 'Preencha com o seu CPF'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'Estado'
-                        helper_text: 'Preencha com o seu estado'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'Cidade'
-                        helper_text: 'Preencha com a sua cidade'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'Endereço'
-                        helper_text: 'Preencha seu endereço'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'Telefone'
-                        helper_text: 'Preencha com o seu telefone'
-                        helper_text_mode: 'on_focus'
-
-                    MDTextField:
-                        hint_text: 'E-mail'
-                        helper_text: 'Preencha seu e-mail'
-                        helper_text_mode: 'on_focus'
+                        size_hint: 0.5, 0
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
 
                     MDRaisedButton:
-                        text: 'CADASTRAR'
-                        size_hint: 0.5, None
+                        text: 'Entrar'
+                        size_hint: 0.3, 0.1
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        on_press: app.Mudar_Tela('ScreenCadastroCliente')
+                    
+                    AsyncImage:
+                        source: 'Images/Fundo_Inicial.png'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
 
-                        on_press: app.Mensagem_Concluido()
-
-
-        MDScreen:
-            name: 'ScreenEditarCliente'
-
-            MDBoxLayout:
-                orientation: 'vertical'
-                size_hint: 0.8, 0.7
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
             
+                MDScreen:
+                    name: 'ScreenCadastroCliente'
+                        
+                    MDScrollView:
+                        size_hint: 0.85, 0.95
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
-        MDScreen:
-            name: 'ScreenExcluirCliente'
-            MDBoxLayout:
-                orientation: 'vertical'
-                spacing: dp(20)
-                padding: dp(48)
+                        GridLayout:
+                            cols: 1
+                            padding: "30dp"
+                            spacing: "10dp"
+                            size_hint_y: None
+                            height: self.minimum_height  
+
+                            MDLabel:
+                                text: 'Cadastro de Cliente'
+                                font_size: '40px'
+                                halign: "center"
+                                bold: True
+                                theme_text_color: 'Primary'
+
+                            MDTextField:
+                                hint_text: 'Nome'
+                                helper_text: 'Preencha seu nome'
+                                helper_text_mode: "on_focus"
+                                
+                            MDTextField:
+                                hint_text: 'Sobrenome'
+                                helper_text: 'Preencha seu sobrenome'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'Idade'
+                                helper_text: 'Preencha sua idade'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'RG'
+                                helper_text: 'Preencha com o seu RG'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'CPF'
+                                helper_text: 'Preencha com o seu CPF'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'Estado'
+                                helper_text: 'Preencha com o seu estado'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'Cidade'
+                                helper_text: 'Preencha com a sua cidade'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'Endereço'
+                                helper_text: 'Preencha seu endereço'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'Telefone'
+                                helper_text: 'Preencha com o seu telefone'
+                                helper_text_mode: 'on_focus'
+
+                            MDTextField:
+                                hint_text: 'E-mail'
+                                helper_text: 'Preencha seu e-mail'
+                                helper_text_mode: 'on_focus'
+
+                            MDRaisedButton:
+                                text: 'CADASTRAR'
+                                size_hint: 0.5, None
+
+                                on_press: app.Mensagem_Concluido()
+
+
+                MDScreen:
+                    name: 'ScreenEditarCliente'
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.8, 0.7
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    
+
+                MDScreen:
+                    name: 'ScreenExcluirCliente'
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        spacing: dp(20)
+                        padding: dp(48)
+            
+            MDNavigationDrawer:
+                id: nav_drawer
+                radius: (0, 16, 16, 0)
+
+                MDNavigationDrawerMenu:
+
+                    MDNavigationDrawerHeader:
+                        title: "Sistema Cadastral de Cliente"
+                        text: "Para Clientes Compromeridos"
+                        spacing: "4dp"
+                        padding: "5dp", 0, 0, "20dp"
+
+                    MDNavigationDrawerItem:
+                        
+                        
